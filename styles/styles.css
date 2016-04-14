@@ -1,0 +1,556 @@
+@font-face {
+    font-family: Mathlete-Bulky;
+    src: url("../styles/fonts/Mathlete-Bulky.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Raleway-Medium;
+    src: url("../styles/fonts/Raleway-Medium.ttf");
+}
+
+@font-face {
+    font-family: Raleway-Light;
+    src: url("../styles/fonts/Raleway-Light.ttf");
+}
+body {
+    margin:0;
+    padding:0;
+}
+.animatedLogo {
+    margin: auto;
+    top: 15%;
+    height: 400px;
+    width: 400px;
+    background-image: url("../images/jazz-black-no-wave.jpg");
+    background-size: cover;
+    position: relative;
+}
+.waves {
+    width: 175px;
+    height: 25px;
+    background-size: cover;
+    position: absolute;
+}
+.orange_wave{
+    background-image: url("../images/orange-wav.jpg");
+    top: 210px;
+    left: 130px;
+}
+.blue_wave{
+    background-image: url("../images/blue-wav.jpg");
+    top: 240px;
+    left: 130px;
+}
+.yellow_wave{
+    background-image: url("../images/yellow-wav.jpg");
+    top: 270px;
+    left: 130px;
+}
+.darkContainer {
+    height: 100vh;
+    background-color: black;
+}
+.mainDate {
+    color: white;
+    font-family: Mathlete-Bulky, sans-serif;
+    font-size: 45px;
+    margin-left: 50%;
+    position: absolute;
+    left: -170px;
+    letter-spacing: 3px;
+    margin-top: 110px;
+}
+.contact-data {
+    margin-left: 50%;
+    left: -350px;
+    position:absolute;
+    bottom: 4%;
+    font-family: Raleway-Light, sans-serif;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.lightContainer {
+    height:0;
+    background-color: rgb(240, 240, 240);
+}
+
+.tilesContainer {
+    margin:auto;
+    margin-bottom: 70px;
+    height: 780px;
+    width: 1056px;
+    position:relative;
+}
+
+.tiles {
+    /* -webkit-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
+    -moz-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
+    box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12); */
+    background-color: white;
+    position: absolute;
+}
+
+.tiles:hover {
+    /* -webkit-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);
+    -moz-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);
+    box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23); */
+    cursor: pointer;
+}
+
+.big{
+    margin:auto;
+    top: 10px;
+    height: 680px;
+    width: 1056px;
+    -webkit-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
+    -moz-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
+    -shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
+    background-color: white;
+    /* position: absolute; */
+}
+
+.about-img-small{
+    margin-left:10px !important;
+    margin-top: 20px;
+    height: 140px !important;
+}
+
+.about {
+    /* background-image: url("../images/white_logo1.png") !important;  */
+    /* background-size:cover;  */
+    height: 460px;
+    width: 364px;
+    /* left: 10px; */
+    top: 10px;
+}
+
+.img-about {
+    margin-left:-8px;
+    height: 370px;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.about-nav {
+    width: 100%;
+    margin-top: 110px;
+    color: white;
+    height:0;
+    background-color: rgb(79, 222, 252);
+    font-family: Raleway-Light, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.about-nav>p {
+    padding-top: 25px;
+    display: inline-block;
+}
+
+
+
+/* .img-about:hover { */
+/* -webkit-transform: scale(0.8); */
+/* transform: scale(0.8); */
+/* }  */
+
+/* .before-mask {
+	height: 0px;
+	width: 681px;
+	left: 394px;
+	top: 30px;
+	background-color: rgb(254, 207, 16);
+	opacity: 0.4;
+	z-index:10;
+}
+
+.beforeFestival {
+	height: 215px;
+	width: 681px;
+	left: 394px;
+	top: 30px;
+	background-image: url('../images/mark_reilly.png');
+	opacity: 0.9;
+	z-index:0;
+} */
+.artists {
+    background-color: rgb(254, 207, 16);
+    height: 215px;
+    width: 661px;
+    left: 374px;
+    top: 10px;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    color: white;
+}
+.artists:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+
+}
+.artists:hover, .artists:focus, .artists:active {
+    color: white;
+}
+.artists:hover:before, .artists:focus:before, .artists:active:before {
+    background-image: url('../images/mark_reilly.png');
+    background-color: white;
+
+    opacity: 0.3;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.artists-text>h1{
+    text-align: center;
+    margin-top: 50px;
+    font-family: Mathlete-Bulky, sans-serif;
+    font-size: 60px;
+}
+
+.artists-text>h2{
+    text-align: center;
+    margin-top: 20px;
+    font-family: Raleway-Light, sans-serif;
+    font-size: 20px;
+}
+
+
+
+.tickets {
+    background-image: url('../images/facebook-white1.png');
+    background-color: rgb(0,74,154);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 33px 15px;
+    height: 236px;
+    width: 355px;
+    left: 374px;
+    top: 235px;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.tickets:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('../images/facebook.png');
+    background-color: rgb(255,255,255);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 33px 15px;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
+    -moz-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
+    box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
+}
+.tickets:hover, .tickets:focus, .tickets:active {
+    color: white;
+}
+.tickets:hover:before, .tickets:focus:before, .tickets:active:before {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+}
+
+.news {
+    height: 484px;
+    width: 297px;
+    left: 739px;
+    top: 235px;
+    bottom: 30px;
+    /*background-image: url('../images/jazz.png');*/
+}
+
+.contact-img{
+    margin-top: 10px;
+    margin-left: 115px;
+    width: 170px;
+}
+
+.contact {
+    height: 236px;
+    width: 355px;
+    left: 374px;
+    top: 481px;
+    bottom: 30px;
+    background-color: rgb(235, 80, 2);
+
+}
+
+.contact-title {
+    margin-top: 80px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    position:absolute;
+
+    margin-left: 5px;
+    display: inline-block;
+    color:white;
+    font-family: Mathlete-Bulky, sans-serif;
+    font-size: 60px;
+}
+/* .e-mail>p{
+	font-family: Raleway-Light, sans-serif;
+	font-size:
+	18px;
+	color: white;
+	margin-left: 20px;
+font-style: italic;
+}
+
+.e-mail>h2{
+	font-family: Raleway-Medium, sans-serif;
+	font-size: 20px;
+	color: white;
+	margin-left: 20px;
+} */
+
+.partners {
+    height: 236px;
+    width: 365px;
+    /* left: 0.5vw; */
+    top: 481px;
+    bottom: 30px;
+    background-color: #4FDEFC ;
+    color: white;
+    font-family: Mathlete-Bulky, sans-serif;
+    font-size: 60px;
+    /*background-image: url('../images/time.jpg');*/
+}
+
+.hide {
+    display: none;
+}
+
+.click{
+    -webkit-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);
+    -moz-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);
+    box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    left: 1030px;
+    font-size: 16px;
+}
+
+.close:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.about-text{
+    font-family: Raleway-Medium, sans-serif;
+}
+
+h1.about-text{
+    margin-top: 10px;
+    left: 200px;
+    position: absolute;
+    font-family: Mathlete-Bulky, sans-serif;
+    font-size: 60px;
+    display: inline-block;
+    width: 60%;
+}
+
+h2.about-text{
+    top: 60px;
+    left: 200px;
+    position: absolute;
+    font-family: Mathlete-Bulky, sans-serif;
+    font-size: 40px;
+    display: inline-block;
+    width: 60%;
+}
+
+p.about-text {
+    line-height: 25px;
+    margin-left: 200px;
+    width: 75%;
+    text-align: justify;
+}
+
+/* img.about-text { */
+/* margin-left: 200px; */
+/* height: 20px; */
+/* } */
+
+.footer {
+    height: 0;
+    background-color: rgb(255,255,255);
+    border-top: solid 5px rgb(254, 207, 16);
+
+
+}
+@media screen and (min-width: 1600px){
+    .animatedLogo {
+        height: 470px;
+        width: 470px;
+    }
+    .waves {
+        width: 206px;
+        height: 35px;
+    }
+    .orange_wave{
+        top: 240px;
+        left: 153px;
+    }
+    .blue_wave{
+        top: 280px;
+        left: 153px;
+    }
+    .yellow_wave{
+        top: 315px;
+        left: 153px;
+    }
+    .mainDate {
+        font-size: 53px;
+        left: -190px;
+    }
+}
+@media screen and (max-height: 900px){
+    .mainDate {
+        margin-top: 90px;
+    }
+}
+@media screen and (max-height: 760px){
+    .mainDate {
+        margin-top: 70px;
+    }
+}
+@media screen and (max-height: 650px){
+    .animatedLogo {
+        top: 7%;
+    }
+    .mainDate {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .contact-data {
+        width: 300px;
+        left: -150px;
+        letter-spacing: 2px;
+        margin-top: -18%;
+        text-align: center;
+    }
+
+    .img-about {
+        height:  200px;
+    }
+    .tiles.about, .tiles.beforeFestival, .tiles.tickets, .contact.tiles, .artists.tiles, .partners.tiles{
+        left: 0px;
+        position: relative;
+        width:95vw;
+        height: 200px;
+        margin: 10px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 380px){
+    .animatedLogo {
+        height: 300px;
+        width: 300px;
+    }
+    .waves {
+        width: 128px;
+        height: 20px;
+    }
+    .orange_wave{
+        top: 153px;
+        left: 100px;
+    }
+    .blue_wave{
+        top: 177px;
+        left: 100px;
+    }
+    .yellow_wave{
+        top: 202px;
+        left: 100px;
+    }
+    .mainDate {
+        font-size: 29px;
+        left: -120px;
+        top: 310px;
+    }
+}
+
+@media screen and (max-height: 460px){
+    .animatedLogo {
+        height: 200px;
+        width: 200px;
+    }
+    .waves {
+        width: 90px;
+        height: 12px;
+    }
+    .orange_wave{
+        top: 103px;
+        left: 65px;
+    }
+    .blue_wave{
+        top: 117px;
+        left: 65px;
+    }
+    .yellow_wave{
+        top: 130px;
+        left: 65px;
+    }
+    .mainDate {
+        font-size: 18px;
+        left: -90px;
+        top: 200px;
+    }
+}
