@@ -154,7 +154,7 @@ $('document').ready(function(){
 
     $('.about').click(function(){
         $('.about-nav').animate({
-            height: "0",
+            height: "80px",
         }, 300)
         $('.about-nav').toggleClass('hide');
         $(this).removeClass('tiles');
