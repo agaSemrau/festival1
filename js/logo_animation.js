@@ -70,6 +70,8 @@ $('document').ready(function(){
         $('.yellow_wave').stop(true, true );
         $('.orange_wave').stop(true, true );
 
+        $('.contact-data').addClass("hide");
+
         $('.orange_wave')
             .animate({
                 height: "6px",
@@ -100,19 +102,25 @@ $('document').ready(function(){
                 paddingTop: "15px"
             }, 1200);
 
+        $('.wrapper')
+                .animate({
+                    height: "95px",
+                    paddingTop: "0"
+                }, 1200);
+
         $('.mainDate')
-            .animate({
-                position: "absolute",
-                fontSize: '65px',
-                top: "-10px",
-                left: "5vw"
+           .animate({
+                position: "relative",
+                fontSize: '3.4vw',
+                top: "1%",
+                left: "2vw"
             }, 500);
 
         $('.animatedLogo')
             .animate({
                 height: "83px",
                 width: "83px",
-                marginLeft: "15%",
+                marginLeft: "40px",
                 top: "-10px"
             }, 1200);
 
@@ -129,20 +137,20 @@ $('document').ready(function(){
             }, 300)
     });
 
-    $('.about').mouseenter(function(){
-
-        $('.about-nav').animate({
-            height: "80px",
-            marginTop: "10px"
-        }, 300)
-    });
-
-    $('.about').mouseleave(function(){
-
-        $('.about-nav').animate({
-            height: "0",
-        }, 300)
-    });
+    //$('.about').mouseenter(function(){
+    //
+    //    $('.about-nav').animate({
+    //        height: "80px",
+    //        marginTop: "10px"
+    //    }, 300)
+    //});
+    //
+    //$('.about').mouseleave(function(){
+    //
+    //    $('.about-nav').animate({
+    //        height: "0",
+    //    }, 300)
+    //});
 
     $('.about').click(function(){
         $('.about-nav').animate({
@@ -157,7 +165,7 @@ $('document').ready(function(){
         $('.img-about').toggleClass('about-img-small');
         $(this).toggleClass('big');
         $(this).toggleClass('about',0);
-    })
+    });
 
     $('.artists').click(function(){
         $(this).removeClass('tiles');
@@ -167,17 +175,7 @@ $('document').ready(function(){
         $(this).addClass('tiles');
         $(this).toggleClass('big');
         $(this).toggleClass('artists',0);
-    })
-
-    // $('.beforeFestival').mouseover(function(){
-    // $('.beforeFestival>h1').removeClass('hide');
-    // $('.beforeFestival>h2').removeClass('hide');
-    // })
-
-    // $('.beforeFestival').mouseout(function(){
-    // $('.beforeFestival>h1').addClass('hide');
-    // $('.beforeFestival>h2').addClass('hide');
-    // })
+    });
 
     $('.contact').mouseenter(function(){
         // $('.contact-img').fadeOut(600);
@@ -191,7 +189,7 @@ $('document').ready(function(){
         },50)
 
         $('.contact-img').animate({
-            marginTop: "10px",
+            marginTop: "30px",
             opacity: "1"
         }, 200)
 

@@ -58,7 +58,7 @@ body {
     position: absolute;
     left: -170px;
     letter-spacing: 3px;
-    margin-top: 110px;
+    margin-top: 0px;
 }
 .contact-data {
     margin-left: 50%;
@@ -69,16 +69,21 @@ body {
     color: white;
     letter-spacing: 3px;
 }
-
+.wrapper {
+    width: 1140px;
+    margin:auto;
+    padding-top: 12vh;
+}
 .lightContainer {
     height:0;
     background-color: rgb(240, 240, 240);
 }
 
 .tilesContainer {
+    top: 3vh;
     margin:auto;
     margin-bottom: 70px;
-    height: 780px;
+    height: 820px;
     width: 1056px;
     position:relative;
 }
@@ -136,10 +141,10 @@ body {
 
 .about-nav {
     width: 100%;
-    margin-top: 110px;
+    margin-top: 10px;
     color: white;
-    height:0;
-    background-color: rgb(79, 222, 252);
+    height:80px;
+    background-color: black;
     font-family: Raleway-Light, sans-serif;
     font-size: 20px;
     text-align: center;
@@ -227,9 +232,9 @@ body {
 
 .artists-text>h1{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
     font-family: Mathlete-Bulky, sans-serif;
-    font-size: 60px;
+    font-size: 90px;
 }
 
 .artists-text>h2{
@@ -239,11 +244,24 @@ body {
     font-size: 20px;
 }
 
+.tickets>h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Mathlete-Bulky, sans-serif;
+    font-size: 120px;
 
+}
+
+.tickets>h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Raleway-Light, sans-serif;
+    font-size: 20px;
+
+}
 
 .tickets {
-    background-image: url('../images/facebook-white1.png');
-    background-color: rgb(0,74,154);
+    background-color: rgb(255,255,255);
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: 33px 15px;
@@ -261,6 +279,7 @@ body {
     transition-property: color;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    color: white;
 }
 .tickets:before {
     content: "";
@@ -270,8 +289,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url('../images/facebook.png');
-    background-color: rgb(255,255,255);
+    background-color: rgb(0,74,154);
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: 33px 15px;
@@ -285,17 +303,21 @@ body {
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-    -webkit-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
-    -moz-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
-    box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
+    /*-webkit-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);*/
+    /*-moz-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);*/
+    /*box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);*/
 }
-.tickets:hover, .tickets:focus, .tickets:active {
-    color: white;
+.tickets:hover, .tickets:focus, .tickets:active  {
+    color: black;
 }
+
 .tickets:hover:before, .tickets:focus:before, .tickets:active:before {
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
+    color: black;
 }
+
+
 
 .news {
     height: 484px;
@@ -307,7 +329,7 @@ body {
 }
 
 .contact-img{
-    margin-top: 10px;
+    margin-top: 30px;
     margin-left: 115px;
     width: 170px;
 }
@@ -363,6 +385,20 @@ font-style: italic;
     font-family: Mathlete-Bulky, sans-serif;
     font-size: 60px;
     /*background-image: url('../images/time.jpg');*/
+}
+
+.partners>h1{
+    text-align: center;
+    margin-top: 20px;
+    font-family: Mathlete-Bulky, sans-serif;
+    font-size: 120px;
+}
+
+.partners>h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Raleway-Light, sans-serif;
+    font-size: 20px;
 }
 
 .hide {
@@ -456,22 +492,10 @@ p.about-text {
         left: -190px;
     }
 }
-@media screen and (max-height: 900px){
-    .mainDate {
-        margin-top: 90px;
-    }
-}
-@media screen and (max-height: 760px){
-    .mainDate {
-        margin-top: 70px;
-    }
-}
-@media screen and (max-height: 650px){
-    .animatedLogo {
-        top: 7%;
-    }
-    .mainDate {
-        margin-top: 10px;
+
+@media screen and (max-width: 1050px){
+    .wrapper {
+        width: 100%;
     }
 }
 
@@ -483,11 +507,10 @@ p.about-text {
         margin-top: -18%;
         text-align: center;
     }
-
     .img-about {
         height:  200px;
     }
-    .tiles.about, .tiles.beforeFestival, .tiles.tickets, .contact.tiles, .artists.tiles, .partners.tiles{
+    .tiles.about, .tiles.tickets, .contact.tiles, .artists.tiles, .partners.tiles, .news.tiles{
         left: 0px;
         position: relative;
         width:95vw;
@@ -495,8 +518,46 @@ p.about-text {
         margin: 10px;
     }
 
+    .fb_page, .fb_iframe_widget_fluid, .fb_iframe_widget{
+        display: none !important;
+    }
 
+    .lightContainer, .tilesContainer {
+        height: 100%;
+       width: 100%;
+    }
 
+    .tickets, .contact, .partners, .news {
+        top: 0;
+ }
+    .img-about {
+        display: none;
+    }
+    .tiles.big {
+        position: relative;
+        max-width: 90%;
+        margin:auto;
+        height: auto;
+    }
+
+    .big>h1, .big>h2 {
+        position: relative;
+        top: 0;
+        left: 7%;
+    }
+
+    .big>p {
+        position: relative;
+        margin-left: 7%;
+    }
+
+    .close {
+        position: relative;
+        margin-top: 5px;
+        margin-right: 5px;
+        top:0;
+        left: 0;
+    }
 }
 
 @media screen and (max-width: 380px){
@@ -523,10 +584,36 @@ p.about-text {
     .mainDate {
         font-size: 29px;
         left: -120px;
-        top: 310px;
+        top: 70vh;
     }
 }
-
+@media screen and (max-height: 680px){
+    .animatedLogo {
+        height: 300px;
+        width: 300px;
+    }
+    .waves {
+        width: 128px;
+        height: 20px;
+    }
+    .orange_wave{
+        top: 153px;
+        left: 100px;
+    }
+    .blue_wave{
+        top: 177px;
+        left: 100px;
+    }
+    .yellow_wave{
+        top: 202px;
+        left: 100px;
+    }
+    .mainDate {
+        font-size: 29px;
+        left: -120px;
+        top: 70vh;
+    }
+}
 @media screen and (max-height: 460px){
     .animatedLogo {
         height: 200px;
@@ -551,6 +638,6 @@ p.about-text {
     .mainDate {
         font-size: 18px;
         left: -90px;
-        top: 200px;
+        /*top: 200px;*/
     }
 }
