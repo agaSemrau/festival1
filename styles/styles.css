@@ -103,6 +103,10 @@ body {
     cursor: pointer;
 }
 
+hr {
+    width: 85%;
+}
+
 .big{
     margin:auto;
     top: 10px;
@@ -112,13 +116,48 @@ body {
     -moz-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
     -shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
     background-color: white;
+    padding: 2%;
+    overflow-y: scroll;
+    overflow-x: hidden;
     /* position: absolute; */
+    cursor: default;
+}
+
+.big>h1 {
+    font-family: Mathlete-Bulky, sans-serif;
+    font-size: 80px;
+    margin-left: 7%;
+}
+
+.big h2 {
+    font-family: Raleway-Light, sans-serif;
+    font-size: 18px;
+    margin-left: 7%;
+}
+
+.big p {
+    font-family: Raleway-Light, sans-serif;
+    line-height: 19px;
+    font-size: 13px;
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: justify;
+}
+
+.artists-img {
+    margin-left: 7%;
+    padding: 10px 0 10px;
+    width: 86%;
 }
 
 .about-img-small{
-    margin-left:10px !important;
-    margin-top: 20px;
+    position: absolute;
+    top: 30px;
+    left: 800px;
     height: 140px !important;
+    /*margin-left:10px !important;*/
+    /*margin-top: 20px;*/
+    /*height: 140px !important;*/
 }
 
 .about {
@@ -153,6 +192,41 @@ body {
 .about-nav>p {
     padding-top: 25px;
     display: inline-block;
+}
+
+.about-text{
+    font-family: Raleway-Medium, sans-serif;
+}
+
+h1.about-text{
+    margin-top: 10px;
+width: 100%;
+    font-family: Mathlete-Bulky, sans-serif;
+    font-size: 60px;
+    display: inline-block;
+    /*width: 60%;*/
+}
+
+h2.about-text{
+
+    width: 100%;
+    font-family: Raleway-Light, sans-serif;
+    font-size: 18px;
+    margin-left: 7%;
+    /*width: 60%;*/
+}
+
+p.about-text {
+    font-family: Raleway-Light, sans-serif;
+    line-height: 19px;
+    font-size: 13px;
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: justify;
+}
+
+.rotated {
+    transform: perspective( 400px ) rotateX(180deg);
 }
 
 
@@ -223,26 +297,32 @@ body {
 }
 .artists:hover:before, .artists:focus:before, .artists:active:before {
     background-image: url('../images/mark_reilly.png');
-    background-color: white;
-
-    opacity: 0.3;
+    opacity: 0.2;
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
 }
 
-.artists-text>h1{
+.artists>h1{
     text-align: center;
     margin-top: 20px;
     font-family: Mathlete-Bulky, sans-serif;
     font-size: 90px;
 }
 
-.artists-text>h2{
+.artists>h2{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: Raleway-Light, sans-serif;
     font-size: 20px;
 }
+
+.peterArrow {
+    margin-left: 7%;
+    margin-top: -88px;
+    width: 86%;
+    height: 0;
+}
+
 
 .tickets>h1 {
     text-align: center;
@@ -254,7 +334,7 @@ body {
 
 .tickets>h2 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: Raleway-Light, sans-serif;
     font-size: 20px;
 
@@ -396,7 +476,7 @@ font-style: italic;
 
 .partners>h2 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: Raleway-Light, sans-serif;
     font-size: 20px;
 }
@@ -414,45 +494,17 @@ font-style: italic;
 .close {
     position: absolute;
     top: 10px;
-    left: 1030px;
+    left: 995px;
     font-size: 16px;
+    opacity:  0.7 !important;
 }
 
 .close:hover {
-    font-weight: bold;
     cursor: pointer;
+    opacity:  0.9 !important;
 }
 
-.about-text{
-    font-family: Raleway-Medium, sans-serif;
-}
 
-h1.about-text{
-    margin-top: 10px;
-    left: 200px;
-    position: absolute;
-    font-family: Mathlete-Bulky, sans-serif;
-    font-size: 60px;
-    display: inline-block;
-    width: 60%;
-}
-
-h2.about-text{
-    top: 60px;
-    left: 200px;
-    position: absolute;
-    font-family: Mathlete-Bulky, sans-serif;
-    font-size: 40px;
-    display: inline-block;
-    width: 60%;
-}
-
-p.about-text {
-    line-height: 25px;
-    margin-left: 200px;
-    width: 75%;
-    text-align: justify;
-}
 
 /* img.about-text { */
 /* margin-left: 200px; */
@@ -463,9 +515,14 @@ p.about-text {
     height: 0;
     background-color: rgb(255,255,255);
     border-top: solid 5px rgb(254, 207, 16);
-
-
+    text-align: center;
+    padding-top: 20px;
+    font-family: Raleway-Medium, sans-serif ;
 }
+
+
+
+/*------------------------------Media queries--------------------------------------*/
 @media screen and (min-width: 1600px){
     .animatedLogo {
         height: 470px;

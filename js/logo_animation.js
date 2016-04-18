@@ -137,20 +137,7 @@ $('document').ready(function(){
             }, 300)
     });
 
-    //$('.about').mouseenter(function(){
-    //
-    //    $('.about-nav').animate({
-    //        height: "80px",
-    //        marginTop: "10px"
-    //    }, 300)
-    //});
-    //
-    //$('.about').mouseleave(function(){
-    //
-    //    $('.about-nav').animate({
-    //        height: "0",
-    //    }, 300)
-    //});
+
 
     $('.about').click(function(){
         $('.about-nav').animate({
@@ -169,12 +156,22 @@ $('document').ready(function(){
 
     $('.artists').click(function(){
         $(this).removeClass('tiles');
-        $('.tiles').toggle(0);
-        // $('.about-text').toggleClass('hide');
-        $('.close').toggleClass('hide');
+        $('.tiles').fadeOut(0);
+        $('.artists-text').removeClass('hide',100);
+        $('.close').removeClass('hide');
         $(this).addClass('tiles');
-        $(this).toggleClass('big');
-        $(this).toggleClass('artists',0);
+        $(this).addClass('big');
+        $(this).removeClass('artists');
+    });
+
+    $(document).on("click" , '.close' , function(){
+        $(this).parent().removeClass('tiles');
+        $('.tiles').fadeIn(0);
+        $(this).parent().addClass('tiles');
+        $(this).parent().removeClass('big');
+        $(this).parent().addClass('artists');
+        $('.artists-text').addClass('hide',100);
+        $('.close').addClass('hide');
     });
 
     $('.contact').mouseenter(function(){
@@ -213,5 +210,19 @@ $('document').ready(function(){
         $(this).addClass('tiles');
         $(this).toggleClass('big');
         $(this).toggleClass('tickets',0);
+    });
+
+    $('.peter-wrapper').mouseenter(function(){
+        $('.peterArrow').animate({
+            height: "50px"}, 400)
+    });
+    $('.peter-wrapper').mouseleave(function(){
+        $('.peterArrow').animate({
+            height: "0"}, 400)
+    });
+    $('.peterArrow').click(function(){
+        $('.description-peter').toggleClass('hide');
+        $('.peterArrow').toggleClass('rotated');
     })
+
 });
