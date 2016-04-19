@@ -145,6 +145,7 @@ $('document').ready(function(){
         $(this).addClass('big');
         $(this).find('.text').removeClass('hide');
         $(this).find('.about-img-small').removeClass('hide');
+
         if ($(this).hasClass('about')) {
             $('.about-nav').addClass('hide');
             $('.img-about').addClass('about-img-small');
