@@ -137,44 +137,73 @@ $('document').ready(function(){
             }, 300)
     });
 
-
-
-    $('.about').click(function(){
-        $('.about-nav').animate({
-            height: "80px",
-        }, 300)
-        $('.about-nav').toggleClass('hide');
-        $(this).removeClass('tiles');
-        $('.tiles').toggle(0);
-        $('.about-text').toggleClass('hide',100);
-        $('.close').toggleClass('hide');
-        $(this).addClass('tiles');
-        $('.img-about').toggleClass('about-img-small');
-        $(this).toggleClass('big');
-        $(this).toggleClass('about',0);
-    });
-
-    $('.artists').click(function(){
+    $('.tiles').click(function () {
         $(this).removeClass('tiles');
         $('.tiles').fadeOut(0);
-        $('.artists-text').removeClass('hide',100);
         $('.close').removeClass('hide');
         $(this).addClass('tiles');
         $(this).addClass('big');
-        $(this).removeClass('artists');
-        $(this).find('img').removeClass('hide');
+        $(this).find('.text').removeClass('hide');
+        $(this).find('.about-img-small').removeClass('hide');
+        if ($(this).hasClass('about')) {
+            $('.about-nav').addClass('hide');
+            $('.img-about').addClass('about-img-small');
+            $(this).removeClass('about');
+            $('.text-about').textillate({ in: { effect: 'flip',  shuffle: true  } }).textillate('start');
+        }
+        if ($(this).hasClass('artists')) {
+            $(this).removeClass('artists');
+        }
+        if ($(this).hasClass('partners') || $(this).hasClass('test')) {
+            $(this).removeClass('partners', 0);
+        }
+        if ($(this).hasClass('tickets')) {
+            $(this).removeClass('tickets', 0);
+        }
+        if ($(this).hasClass('contact')){
+            $(this).removeClass('contact', 0);
+            $('.contact-img').addClass('hide');
+            $('.contact-title').removeClass('rotated');
+
+        }
     });
+
 
     $(document).on("click" , '.close' , function(){
         $(this).parent().removeClass('tiles');
         $('.tiles').fadeIn(0);
         $(this).parent().addClass('tiles');
         $(this).parent().removeClass('big');
-        $(this).parent().addClass('artists');
-        $('.artists-text').addClass('hide',100);
         $('.close').addClass('hide');
-        $(this).parent().find('img').addClass('hide');
+        $(this).parent().find('.text').addClass('hide');
+
+        if($(this).hasClass('close-about')){
+            $('.img-about').removeClass('about-img-small');
+            $('.about-nav').removeClass('hide');
+            $(this).parent().addClass('about');
+        }
+        else if($(this).hasClass('close-artists')){
+            $(this).parent().addClass('artists');
+            $(this).parent().find('.about-img-small').addClass('hide');
+        }
+        else if($(this).hasClass('close-contact')){
+            $(this).parent().addClass('contact');
+            $(this).parent().find('.about-img-small').addClass('hide');
+            $('.contact-img').removeClass('hide');
+            $('.contact-title').addClass('rotated');
+        }
+        else if($(this).hasClass('close-tickets')){
+            $(this).parent().addClass('tickets');
+            $(this).parent().find('.about-img-small').addClass('hide');
+        }
+        else {
+            $(this).parent().addClass('partners');
+            $(this).parent().find('.about-img-small').addClass('hide');
+        }
     });
+
+
+
 
     $('.contact').mouseenter(function(){
         // $('.contact-img').fadeOut(600);
@@ -194,29 +223,33 @@ $('document').ready(function(){
 
     });
 
-    $('.partners').click(function(){
-        $(this).removeClass('tiles');
-        $('.tiles').toggle(0);
-        // $('.about-text').toggleClass('hide');
-        $('.close').toggleClass('hide');
-        $(this).addClass('tiles');
-        $(this).toggleClass('big');
-        $(this).toggleClass('partners',0);
+
+
+
+    $('.partners').mouseenter(function() {
+        $('.partners-heading').textillate({ in: { effect: 'flip',  shuffle: true } }).textillate('start');
+
     });
 
-    $('.tickets').click(function(){
-        $(this).removeClass('tiles');
-        $('.tiles').toggle(0);
-        // $('.about-text').toggleClass('hide');
-        $('.close').toggleClass('hide');
-        $(this).addClass('tiles');
-        $(this).toggleClass('big');
-        $(this).toggleClass('tickets',0);
+    $('.about').mouseenter(function() {
+        $('.about-heading').textillate({ in: { effect: 'flip',  shuffle: true  } }).textillate('start');
+
     });
+
+    $('.artists').mouseenter(function() {
+        $('.artists-head').textillate({ in: { effect: 'flip',  shuffle: true  } }).textillate('start');
+
+    });
+    $('.tickets').mouseenter(function() {
+        $('.tickets-head').textillate({ in: { effect: 'flip',  shuffle: true  } }).textillate('start');
+
+    });
+
+
 
     $('.peter-wrapper, .reilly-wrapper').mouseenter(function(){
         $(this).find(':nth-child(2)').animate({
-            height: "50px"}, 400)
+            height: "20%"}, 400)
     });
     $('.peter-wrapper, .reilly-wrapper').mouseleave(function(){
         $(this).find(':nth-child(2)').animate({
@@ -224,7 +257,10 @@ $('document').ready(function(){
     });
     $('.peterArrow, .reillyArrow').click(function(){
         $(this).parent().find('p').toggleClass('hide');
-        $(this).toggleClass('rotated');
-    })
+        $(this).toggleClass('reverted');
+        $('.big').animate({
+            scrollTop: $(this).parent().offset().top
+        })
+    });
 
 });

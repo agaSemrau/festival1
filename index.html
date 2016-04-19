@@ -6,9 +6,11 @@
     <meta name="keywords" content="Jazz, Jazz Festival, Festiwal Jazzowy, Gdynia Jazz Days, Gdynia Jazz by the sea, Jazz by the sea, Jazz by the sea Weekend, Gdynia Jazz Weekend">
     <meta name="description" content="Gdynia Jazz by the sea weekend, fesiwal jazzowy w Gdyni">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/animate.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="shortcut icon" href="images/white_logo2.png" type="image/x-icon"/>
+    <link href="http://pl.allfont.net/allfont.css?fonts=mathlete-bulky" rel="stylesheet" type="text/css" />
     <title>Jazz by the sea Festival</title>
 </head>
 <body>
@@ -53,16 +55,16 @@
             <div class="tiles about">
                 <img class="img-about" src="images/white_logo2.png">
                 <div class="about-nav">
-                    <p>Program Festiwalu</p>
+                    <p class="about-heading">Program Festiwalu</p>
                 </div>
-                <img class="close hide" src="images/close.png">
-                <h1 class="hide about-text">Jazz by d'sea Festival</h1>
-                <h2 class="hide about-text">O nas</h2>
+                <img class="close hide close-about" src="images/close.png">
+                <h1 class="hide text text-about">Jazz by the sea Festival</h1>
+                <h2 class="hide text">Program</h2>
                 <br>
                 <hr>
                 <br>
                 <!-- <img class="hide about-text" src="images/orange_wave.png"> -->
-                <p class="hide about-text">Litwo! Ojczyzno moja! Ty jesteś jak zdrowie. Nazywał się uczyli. u Woźnego lepiej zna równie pędzel,
+                <p class="hide text">Litwo! Ojczyzno moja! Ty jesteś jak zdrowie. Nazywał się uczyli. u Woźnego lepiej zna równie pędzel,
                     noty, druki. Aż osłupiał Tadeusz przyglądał się nagłe, jej ubrani wysmukłą postać kształtną i na tym starzy
                     i wznosi chmurę pyłu. dalej z tych łąk zielonych szeroko nad nim stał w gościnę zaprasza. Właśnie dwukonną
                     bryką wjechał młody panek i z krzykiem podróżnego barwą spłonęła rumian jak korona na tem miejscu swem
@@ -71,12 +73,12 @@
             </div>
 
             <div class="artists tiles">
-                <img class="close hide" src="images/close.png">
+                <img class="close hide close-artists" src="images/close.png">
                     <h1 class="artists-head">Wykonawcy</h1>
-                    <h2 class="artists-head">Sprawdź kto nas odwiedzi w tym roku</h2>
+                    <h2 >Sprawdź kto nas odwiedzi w tym roku</h2>
                 <img class="about-img-small hide" src="images/white_logo2.png">
                 <!--<br>-->
-                    <div class="hide artists-text">
+                    <div class="hide text">
                         <hr>
                         <!--<br>-->
                     <!--<h2>Artysta Jakiśtam</h2>-->
@@ -112,11 +114,15 @@
 
             </div>
                 <div class="tickets tiles">
-                    <img class="close hide" src="images/close.png">
-                    <h1>Bilety</h1>
-                    <h2>Kup bilety online</h2>
+                    <img class="close hide close-tickets" src="images/close.png">
+                    <h1 class="tickets-head">Bilety</h1>
+                    <h2 >Kup bilety online</h2>
+                    <img class="about-img-small hide" src="images/white_logo2.png">
+                    <div class="hide text">
+                        <hr>
+                        </div>
                 </div>
-            </a>
+
             <div class="news tiles">
                 <div class="fb-page" width="297px"
                      height="484px"
@@ -134,9 +140,14 @@
                 </div>
             </div>
             <div class="contact tiles">
-                <img class="close hide" src="images/close.png">
-                <h1 class="contact-title">Kontakt</h1>
-                    <img class="contact-img" src="images/contact.png">
+                <img class="close hide close-contact" src="images/close.png">
+                <h1 class="contact-title rotated">Kontakt</h1>
+                <img class="contact-img" src="images/contact.png">
+                <img class="about-img-small hide" src="images/white_logo2.png">
+                <div class="hide text">
+                    <h2>Napisz do nas</h2>
+                    <hr>
+                </div>
 
                     <!-- <div class="e-mail">
                     <h2>Bartosz Pieczyński</h2>
@@ -146,10 +157,14 @@
                     </div> -->
 
             </div>
-            <div class="partners tiles">
+            <div class="partners tiles close-partners">
                 <img class="close hide" src="images/close.png">
-                <h1>Partnerzy</h1>
-                <h2>Dziękujemy Wam!</h2>
+                <h1 class="partners-heading">Partnerzy</h1>
+                <h2 >Dziękujemy Wam!</h2>
+                <img class="about-img-small hide" src="images/white_logo2.png">
+                <div class="hide text">
+                    <hr>
+                </div>
 
 
             </div>
@@ -162,6 +177,8 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="js/jquery.lettering-0.6.1.min.js"></script>
+<script src="js/jquery.textillate.js"></script>
 <script src="js/logo_animation.js"></script>
 
 </body>
