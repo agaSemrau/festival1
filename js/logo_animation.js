@@ -162,6 +162,7 @@ $('document').ready(function(){
         $(this).addClass('tiles');
         $(this).addClass('big');
         $(this).removeClass('artists');
+        $(this).find('img').removeClass('hide');
     });
 
     $(document).on("click" , '.close' , function(){
@@ -172,6 +173,7 @@ $('document').ready(function(){
         $(this).parent().addClass('artists');
         $('.artists-text').addClass('hide',100);
         $('.close').addClass('hide');
+        $(this).parent().find('img').addClass('hide');
     });
 
     $('.contact').mouseenter(function(){
@@ -212,17 +214,17 @@ $('document').ready(function(){
         $(this).toggleClass('tickets',0);
     });
 
-    $('.peter-wrapper').mouseenter(function(){
-        $('.peterArrow').animate({
+    $('.peter-wrapper, .reilly-wrapper').mouseenter(function(){
+        $(this).find(':nth-child(2)').animate({
             height: "50px"}, 400)
     });
-    $('.peter-wrapper').mouseleave(function(){
-        $('.peterArrow').animate({
+    $('.peter-wrapper, .reilly-wrapper').mouseleave(function(){
+        $(this).find(':nth-child(2)').animate({
             height: "0"}, 400)
     });
-    $('.peterArrow').click(function(){
-        $('.description-peter').toggleClass('hide');
-        $('.peterArrow').toggleClass('rotated');
+    $('.peterArrow, .reillyArrow').click(function(){
+        $(this).parent().find('p').toggleClass('hide');
+        $(this).toggleClass('rotated');
     })
 
 });
