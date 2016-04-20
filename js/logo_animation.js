@@ -109,9 +109,11 @@ $('document').ready(function(){
                 }, 1200);
 
         $('.mainDate')
+                .removeClass('mainDate')
+                .addClass("animatedDate")
            .animate({
                 position: "relative",
-                fontSize: '3.4vw',
+                fontSize: '60px',
                 top: "1%",
                 left: "2vw"
             }, 500);
@@ -120,7 +122,7 @@ $('document').ready(function(){
             .animate({
                 height: "83px",
                 width: "83px",
-                marginLeft: "40px",
+                marginLeft: "0",
                 top: "-10px"
             }, 1200);
 
