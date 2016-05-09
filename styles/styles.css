@@ -2,7 +2,6 @@
     font-family: Mathlete Bulky;
     src: url("fonts/Mathlete-Bulky.eot?");
     src: url("fonts/Mathlete-Bulky.ttf")format('truetype');
-
 }
 
 @font-face {
@@ -62,8 +61,6 @@ body {
     letter-spacing: 3px;
     margin-top: 0;
 }
-
-
 .contact-data {
     margin-left: 50%;
     left: -350px;
@@ -84,17 +81,13 @@ body {
     padding-top: 4.4%;
     padding-bottom: 4.5%;
 }
-
 .tilesContainer {
-
     margin:auto;
     margin-bottom: 70px;
-
     height: 660px;
     width: 996px;
     position:relative;
 }
-
 .tiles {
     /* -webkit-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
     -moz-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
@@ -102,7 +95,6 @@ body {
     background-color: white;
     position: absolute;
 }
-
 .tiles:hover {
     /* -webkit-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);
     -moz-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);
@@ -128,19 +120,16 @@ hr {
     overflow-x: hidden;
     cursor: default;
 }
-
 .big>h1 {
     font-family: Mathlete Bulky, sans-serif;
     font-size: 80px;
     margin-left: 7%;
 }
-
 .big h2 {
     font-family: Raleway-Light, sans-serif;
     font-size: 18px;
     margin-left: 7%;
 }
-
 .big p {
     font-family: Raleway-Light, sans-serif;
     line-height: 19px;
@@ -149,23 +138,17 @@ hr {
     margin-right: 7%;
     text-align: justify;
 }
-
 .artists-img {
     margin-left: 7%;
     padding: 10px 0 10px;
     width: 86%;
 }
-
 .about-img-small{
     position: absolute;
     top: 40px;
     left: 760px;
     height: 140px !important;
-    /*margin-left:10px !important;*/
-    /*margin-top: 20px;*/
-    /*height: 140px !important;*/
 }
-
 .about {
     /* background-image: url("../images/white_logo1.png") !important;  */
     /* background-size:cover;  */
@@ -174,6 +157,7 @@ hr {
     /* left: 10px; */
     top: 10px;
     cursor: pointer;
+    border: solid 2px black;
 }
 
 .img-about {
@@ -234,95 +218,39 @@ p.about-text {
 .reverted {
     transform: perspective( 400px ) rotateX(180deg);
 }
-
-
-
-/* .img-about:hover { */
-/* -webkit-transform: scale(0.8); */
-/* transform: scale(0.8); */
-/* }  */
-
-/* .before-mask {
-	height: 0px;
-	width: 681px;
-	left: 394px;
-	top: 30px;
-	background-color: rgb(254, 207, 16);
-	opacity: 0.4;
-	z-index:10;
-}
-
-.beforeFestival {
-	height: 215px;
-	width: 681px;
-	left: 394px;
-	top: 30px;
-	background-image: url('../images/mark_reilly.png');
-	opacity: 0.9;
-	z-index:0;
-} */
 .artists {
     cursor: pointer;
-    background-color: rgb(254, 207, 16);
+    background-color: white;
+    border: solid 2px black;
     height: 195px;
     width: 621px;
     left: 354px;
     top: 10px;
     vertical-align: middle;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    color: white;
-}
-.artists:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 50%;
-    transform-origin: 50%;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-
-}
-.artists:hover, .artists:focus, .artists:active {
-    color: white;
-}
-.artists:hover:before, .artists:focus:before, .artists:active:before {
+    color: black;
     background-image: url('../images/pwhite-small.jpg');
-    opacity: 0.2;
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
+    opacity: 0.4;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
 }
 
+.artists:hover {
+    opacity:0.7;
+}
 .artists>h1{
     text-align: center;
     margin-top: 20px;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 90px;
 }
-
 .artists>h2{
     text-align: center;
     margin-top: 10px;
     font-family: Raleway-Light, sans-serif;
     font-size: 20px;
 }
-
 .peterArrow {
     margin-left: 7%;
     margin-top: -88px;
@@ -376,7 +304,8 @@ p.about-text {
     transition-property: color;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    color: white;
+    color: black;
+    border: solid 2px black;
 }
 .tickets:before {
     content: "";
@@ -386,10 +315,11 @@ p.about-text {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgb(0,74,154);
-    background-size: 80%;
+    background-image: url('../images/sea-shore-s.jpg');
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 33px 15px;
+    opacity: 0.4;
+    /*background-position: 33px 15px;*/
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
     -webkit-transform-origin: 50%;
@@ -414,14 +344,13 @@ p.about-text {
     color: black;
 }
 
-
-
 .news {
     height: 444px;
     width: 277px;
     left: 699px;
     top: 215px;
     bottom: 30px;
+    border: solid 2px black;
     /*background-image: url('../images/jazz.png');*/
 }
 
@@ -432,13 +361,15 @@ p.about-text {
 }
 
 .contact {
+    background-image: url('../images/contacta.jpg');
+    border: solid 2px black;
     cursor: pointer;
     height: 216px;
     width: 335px;
     left: 354px;
     top: 441px;
     bottom: 30px;
-    background-color: rgb(235, 80, 2);
+    background-color: white;
 
 }
 .contact-title {
@@ -456,40 +387,20 @@ p.about-text {
     position:absolute;
     margin-left: 5px;
     display: inline-block;
-    color:white;
+    color:black;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 60px;
 }
-
-
-/* .e-mail>p{
-	font-family: Raleway-Light, sans-serif;
-	font-size:
-	18px;
-	color: white;
-	margin-left: 20px;
-font-style: italic;
-}
-
-.e-mail>h2{
-	font-family: Raleway-Medium, sans-serif;
-	font-size: 20px;
-	color: white;
-	margin-left: 20px;
-} */
-
 .partners {
     cursor: pointer;
     height: 216px;
     width: 345px;
-    /* left: 0.5vw; */
     top: 441px;
     bottom: 30px;
-    background-color: #4FDEFC ;
-    color: white;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 60px;
-    /*background-image: url('../images/time.jpg');*/
+    background-image: url('../images/pianos.jpg');
+    border: solid 2px black;
 }
 
 .partners>h1{
@@ -497,6 +408,8 @@ font-style: italic;
     margin-top: 20px;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 120px;
+    color: black;
+  ;
 }
 
 .partners>h2 {
@@ -504,10 +417,14 @@ font-style: italic;
     margin-top: 10px;
     font-family: Raleway-Light, sans-serif;
     font-size: 20px;
+    color: black;
+
 }
 
 .hide {
-    display: none;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 
 .click{
@@ -530,17 +447,36 @@ font-style: italic;
     opacity:  0.9 !important;
 }
 
+.facebook-wrapper {
+    position:fixed;
+    right: -277px;
+    top: 50%;
+    margin-top: -320px;
+    border: 2px solid black;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
 
+.facebook-wrapper:hover {
+    right: 0;
+}
+.facebook-logo {
+    background-image: url('../images/fblogo.png');
 
-/* img.about-text { */
-/* margin-left: 200px; */
-/* height: 20px; */
-/* } */
+    height: 60px;
+    width:60px;
+    position: fixed;
+    top: 200px;
+    right:0;
+}
+
 
 .footer {
     height: 0;
     background-color: rgb(255,255,255);
-    border-top: solid 5px rgb(254, 207, 16);
+    /*border-top: solid 5px rgb(254, 207, 16);*/
     text-align: center;
     padding-top: 20px;
     font-family: Raleway-Medium, sans-serif ;
@@ -575,8 +511,6 @@ font-style: italic;
         left: -190px;
     }
 }
-
-
 
 @media screen and (max-width: 1050px){
 
