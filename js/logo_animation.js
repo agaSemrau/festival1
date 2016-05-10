@@ -141,6 +141,7 @@ $('document').ready(function(){
     });
 
     $('.tiles').click(function () {
+        $("html, body").animate({ scrollTop: "140px" }, 300);
         $(this).removeClass('tiles');
         $('.tiles').fadeOut(0);
         $('.close').removeClass('hide');
