@@ -70,14 +70,14 @@ body {
     color: white;
     letter-spacing: 3px;
 }
-.wrapper {
+.menu-wrapper {
     width: 1000px;
     margin:auto;
     padding-top: 12vh;
 }
 .lightContainer {
     height: 0;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(244, 244, 244);
     padding-top: 4.4%;
     padding-bottom: 4.5%;
 }
@@ -89,17 +89,17 @@ body {
     position:relative;
 }
 .tiles {
-    /* -webkit-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
-    -moz-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
-    box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12); */
+    /*-webkit-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);*/
+    /*-moz-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);*/
+    /*box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);*/
     background-color: white;
     position: absolute;
 }
 .tiles:hover {
-    /* -webkit-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);
-    -moz-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);
-    box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23); */
-    /*cursor: pointer;*/
+    -webkit-box-shadow: 10px 20px 31px -4px rgba(8,8,8,0.27);
+    -moz-box-shadow: 10px 20px 31px -4px rgba(8,8,8,0.27);
+    box-shadow: 10px 20px 31px -4px rgba(8,8,8,0.27);
+    cursor: pointer;
 }
 
 hr {
@@ -138,11 +138,7 @@ hr {
     margin-right: 7%;
     text-align: justify;
 }
-.artists-img {
-    margin-left: 7%;
-    padding: 10px 0 10px;
-    width: 86%;
-}
+
 .about-img-small{
     position: absolute;
     top: 40px;
@@ -228,16 +224,15 @@ p.about-text {
     top: 10px;
     vertical-align: middle;
     color: black;
-    background-image: url('../images/pwhite-small.jpg');
-    opacity: 0.4;
-    transition: opacity .5s ease-out;
-    -moz-transition: opacity .5s ease-out;
-    -webkit-transition: opacity .5s ease-out;
-    -o-transition: opacity .5s ease-out;
+    background-image: url('../images/reilly2.jpg');
+    transition:  .5s ease-out;
+    -moz-transition:  .5s ease-out;
+    -webkit-transition:  .5s ease-out;
+    -o-transition:  .5s ease-out;
 }
 
 .artists:hover {
-    opacity:0.7;
+    background-image: url('../images/reilly1.jpg');
 }
 .artists>h1{
     text-align: center;
@@ -250,6 +245,11 @@ p.about-text {
     margin-top: 10px;
     font-family: Raleway-Light, sans-serif;
     font-size: 20px;
+}
+.artists-img {
+    margin-left: 7%;
+    padding: 10px 0 10px;
+    width: 86%;
 }
 .peterArrow {
     margin-left: 7%;
@@ -267,8 +267,7 @@ p.about-text {
     cursor: pointer;
 }
 
-
-.tickets>h1 {
+.tickets>h1, .events>h1 {
     text-align: center;
     margin-top: 20px;
     font-family: Mathlete Bulky, sans-serif;
@@ -276,82 +275,57 @@ p.about-text {
 
 }
 
-.tickets>h2 {
+.tickets>h2, .events>h2 {
     text-align: center;
     margin-top: 10px;
     font-family: Raleway-Light, sans-serif;
     font-size: 20px;
+}
 
+.events>h1 {
+    margin-top: 130px;
+    font-size: 90px;
 }
 
 .tickets {
     cursor: pointer;
-    background-color: rgb(255,255,255);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: 33px 15px;
+    background-image: url('../images/shore2.jpg');
+   background-size: cover;
+    border: 2px solid black;
     height: 216px;
     width: 335px;
     left: 354px;
     top: 215px;
     vertical-align: middle;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
     color: black;
-    border: solid 2px black;
-}
-.tickets:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: url('../images/sea-shore-s.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    opacity: 0.4;
-    /*background-position: 33px 15px;*/
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-    -webkit-transform-origin: 50%;
-    transform-origin: 50%;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    /*-webkit-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);*/
-    /*-moz-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);*/
-    /*box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);*/
-}
-.tickets:hover, .tickets:focus, .tickets:active  {
-    color: black;
+    transition:  .5s ease-out;
+    -moz-transition:  .5s ease-out;
+    -webkit-transition:  .5s ease-out;
+    -o-transition:  .5s ease-out;
 }
 
-.tickets:hover:before, .tickets:focus:before, .tickets:active:before {
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    color: black;
+.tickets:hover {
+    background-image: url('../images/shore3.jpg');
 }
 
-.news {
+.events {
     height: 444px;
     width: 277px;
     left: 699px;
     top: 215px;
     bottom: 30px;
     border: solid 2px black;
-    /*background-image: url('../images/jazz.png');*/
+    background-image: url('../images/peterw.jpg');
+    background-size: cover;
+    transition:  .5s ease-out;
+    -moz-transition:  .5s ease-out;
+    -webkit-transition:  .5s ease-out;
+    -o-transition:  .5s ease-out;
+}
+
+.events:hover{
+    background-image: url('../images/peter1.jpg');
+    cursor: pointer;
 }
 
 .contact-img{
@@ -361,7 +335,8 @@ p.about-text {
 }
 
 .contact {
-    background-image: url('../images/contacta.jpg');
+    background-image: url('../images/contact2.jpg');
+    background-size: cover;
     border: solid 2px black;
     cursor: pointer;
     height: 216px;
@@ -370,7 +345,13 @@ p.about-text {
     top: 441px;
     bottom: 30px;
     background-color: white;
-
+    transition:  .5s ease-out;
+    -moz-transition:  .5s ease-out;
+    -webkit-transition:  .5s ease-out;
+    -o-transition:  .5s ease-out;
+}
+.contact:hover {
+    background-image: url('../images/contact1.jpg');
 }
 .contact-title {
     margin-top: 20px;
@@ -399,8 +380,17 @@ p.about-text {
     bottom: 30px;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 60px;
-    background-image: url('../images/pianos.jpg');
+    background-image: url('../images/piano3.jpg');
+    background-size: cover;
     border: solid 2px black;
+    transition:  .5s ease-out;
+    -moz-transition:  .5s ease-out;
+    -webkit-transition:  .5s ease-out;
+    -o-transition:  .5s ease-out;
+}
+
+.partners:hover {
+    background-image: url('../images/piano4.jpg');
 }
 
 .partners>h1{
@@ -409,7 +399,7 @@ p.about-text {
     font-family: Mathlete Bulky, sans-serif;
     font-size: 120px;
     color: black;
-  ;
+;
 }
 
 .partners>h2 {
@@ -452,7 +442,6 @@ p.about-text {
     right: -277px;
     top: 50%;
     margin-top: -320px;
-    border: 2px solid black;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
@@ -464,14 +453,15 @@ p.about-text {
 }
 .facebook-logo {
     background-image: url('../images/fblogo.png');
-
     height: 60px;
     width:60px;
-    position: fixed;
-    top: 200px;
-    right:0;
+    position: relative;
+    top: 0;
+    margin-left: -60px;
 }
-
+ iframe {
+     margin-top: -56px;
+ }
 
 .footer {
     height: 0;
@@ -514,7 +504,7 @@ p.about-text {
 
 @media screen and (max-width: 1050px){
 
-    .wrapper {
+    .menu-wrapper {
         width: 100%;
     }
     .contact-data {
@@ -541,12 +531,12 @@ p.about-text {
 
     .lightContainer, .tilesContainer {
         height: 100%;
-       width: 100%;
+        width: 100%;
     }
 
     .tickets, .contact, .partners, .news {
         top: 0;
- }
+    }
     .img-about {
         display: none;
     }

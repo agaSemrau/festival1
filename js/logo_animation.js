@@ -65,7 +65,8 @@ $('document').ready(function(){
 
 
 
-    $('.animatedLogo').click(function(){
+    $('span').click(function(){
+        $('.animatedLogo').addClass('logoAnimatedSmall');
         $('.blue_wave').stop(true, true );
         $('.yellow_wave').stop(true, true );
         $('.orange_wave').stop(true, true );
@@ -102,7 +103,7 @@ $('document').ready(function(){
                 paddingTop: "15px"
             }, 1200);
 
-        $('.wrapper')
+        $('.menu-wrapper')
                 .animate({
                     height: "95px",
                     paddingTop: "0"
@@ -114,7 +115,7 @@ $('document').ready(function(){
            .animate({
                 position: "relative",
                 fontSize: '60px',
-                top: "1%",
+                top: "0",
                 left: "2vw"
             }, 500);
 
@@ -167,7 +168,9 @@ $('document').ready(function(){
             $(this).removeClass('contact', 0);
             $('.contact-img').addClass('hide');
             $('.contact-title').removeClass('rotated');
-
+        }
+        if ($(this).hasClass('events')){
+            $(this).removeClass('events', 0);
         }
     });
 
@@ -197,6 +200,10 @@ $('document').ready(function(){
         }
         else if($(this).hasClass('close-tickets')){
             $(this).parent().addClass('tickets');
+            $(this).parent().find('.about-img-small').addClass('hide');
+        }
+        else if($(this).hasClass('close-events')){
+            $(this).parent().addClass('events');
             $(this).parent().find('.about-img-small').addClass('hide');
         }
         else {
@@ -245,6 +252,10 @@ $('document').ready(function(){
     });
     $('.tickets').mouseenter(function() {
         $('.tickets-head').textillate({ in: { effect: 'flip',  shuffle: true  } }).textillate('start');
+
+    });
+    $('.events').mouseenter(function() {
+        $('.events-head').textillate({ in: { effect: 'flip',  shuffle: true  } }).textillate('start');
 
     });
 
