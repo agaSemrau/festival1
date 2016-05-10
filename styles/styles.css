@@ -15,6 +15,12 @@ body {
     margin:0;
     padding:0;
 }
+.hide {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+/*----------------------------LOGO------------------------------*/
 .animatedLogo {
     margin: auto;
     top: 15%;
@@ -73,6 +79,8 @@ body {
     margin:auto;
     padding-top: 12vh;
 }
+
+/*----------------------------KONTENER Z KAFELKAMI I KAFELKI------------------------------*/
 .lightContainer {
     height: 0;
     background-color: rgb(244, 244, 244);
@@ -87,31 +95,26 @@ body {
     position:relative;
 }
 .tiles {
-    /*-webkit-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);*/
-    /*-moz-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);*/
-    /*box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);*/
     background-color: white;
     position: absolute;
 }
-.tiles:hover {
+.about:hover, .artists:hover, .partners:hover, .contact:hover, .events:hover, .tickets:hover  {
     -webkit-box-shadow: 10px 20px 31px -4px rgba(8,8,8,0.27);
     -moz-box-shadow: 10px 20px 31px -4px rgba(8,8,8,0.27);
     box-shadow: 10px 20px 31px -4px rgba(8,8,8,0.27);
     cursor: pointer;
 }
-
 hr {
     width: 85%;
 }
-
 .big{
     margin:auto;
     top: 10px;
     height: 660px;
     width: 996px;
-    -webkit-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
-    -moz-box-shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
-    -shadow: 28px 31px 31px 0px rgba(8,8,8,0.12);
+    -webkit-box-shadow: 28px 31px 31px 0 rgba(8,8,8,0.12);
+    -moz-box-shadow: 28px 31px 31px 0 rgba(8,8,8,0.12);
+    -shadow: 28px 31px 31px 0 rgba(8,8,8,0.12);
     background-color: white;
     padding: 2%;
     overflow-y: auto;
@@ -136,7 +139,6 @@ hr {
     margin-right: 7%;
     text-align: justify;
 }
-
 .about-img-small{
     position: absolute;
     top: 40px;
@@ -147,19 +149,23 @@ hr {
     height: 420px;
     width: 344px;
     top: 10px;
-    cursor: pointer;
     border: solid 2px black;
+    transition:  .5s ease-out;
+    -moz-transition:  .5s ease-out;
+    -webkit-transition:  .5s ease-out;
+    -o-transition:  .5s ease-out;
 }
-
+.text-about {
+    margin-top: 10px;
+    margin-left: 7%;
+    width: 100%;
+    font-family: Mathlete Bulky, sans-serif;
+    font-size: 60px;
+    display: inline-block;
+}
 .img-about {
-    margin-left:-8px;
-    height: 350px;
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+    height: 340px;
 }
-
 .about-nav {
     width: 100%;
     position:absolute;
@@ -170,53 +176,20 @@ hr {
     font-family: Raleway-Light, sans-serif;
     font-size: 20px;
     text-align: center;
-}
-
-.about-nav>p {
     padding-top: 25px;
-    display: inline-block;
 }
-
 .about-text{
     font-family: Raleway-Medium, sans-serif;
 }
-
-h1.about-text{
-    margin-top: 10px;
-    width: 100%;
-    font-family: Mathlete Bulky, sans-serif;
-    font-size: 60px;
-    display: inline-block;
-}
-
-h2.about-text{
-    width: 100%;
-    font-family: Raleway-Light, sans-serif;
-    font-size: 18px;
-    margin-left: 7%;
-}
-
-p.about-text {
-    font-family: Raleway-Light, sans-serif;
-    line-height: 19px;
-    font-size: 13px;
-    margin-left: 7%;
-    margin-right: 7%;
-    text-align: justify;
-}
-
 .reverted {
     transform: perspective( 400px ) rotateX(180deg);
 }
 .artists {
-    cursor: pointer;
-    background-color: white;
     border: solid 2px black;
     height: 195px;
     width: 621px;
     left: 354px;
     top: 10px;
-    vertical-align: middle;
     color: black;
     background-image: url('../images/reilly2.jpg');
     transition:  .5s ease-out;
@@ -224,11 +197,10 @@ p.about-text {
     -webkit-transition:  .5s ease-out;
     -o-transition:  .5s ease-out;
 }
-
 .artists:hover {
     background-image: url('../images/reilly1.jpg');
 }
-.artists>h1{
+.artists h1{
     text-align: center;
     margin-top: 20px;
     font-family: Mathlete Bulky, sans-serif;
@@ -252,7 +224,6 @@ p.about-text {
     height: 0;
     cursor: pointer;
 }
-
 .reillyArrow {
     margin-left: 7%;
     margin-top: -88px;
@@ -260,29 +231,7 @@ p.about-text {
     height: 0;
     cursor: pointer;
 }
-
-.tickets>h1, .events>h1 {
-    text-align: center;
-    margin-top: 20px;
-    font-family: Mathlete Bulky, sans-serif;
-    font-size: 120px;
-
-}
-
-.tickets>h2, .events>h2 {
-    text-align: center;
-    margin-top: 10px;
-    font-family: Raleway-Light, sans-serif;
-    font-size: 20px;
-}
-
-.events>h1 {
-    margin-top: 130px;
-    font-size: 90px;
-}
-
 .tickets {
-    cursor: pointer;
     background-image: url('../images/shore2.jpg');
     background-size: cover;
     border: 2px solid black;
@@ -290,18 +239,31 @@ p.about-text {
     width: 335px;
     left: 354px;
     top: 215px;
-    vertical-align: middle;
     color: black;
     transition:  0.5s ease-out;
     -moz-transition:  0.5s ease-out;
     -webkit-transition:  0.5s ease-out;
     -o-transition:  0.5s ease-out;
 }
-
 .tickets:hover {
     background-image: url('../images/shore3.jpg');
 }
-
+.tickets>h1, .events>h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Mathlete Bulky, sans-serif;
+    font-size: 120px;
+}
+.tickets>h2, .events>h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: Raleway-Light, sans-serif;
+    font-size: 20px;
+}
+.events>h1 {
+    margin-top: 130px;
+    font-size: 90px;
+}
 .events {
     height: 444px;
     width: 277px;
@@ -315,30 +277,25 @@ p.about-text {
     -moz-transition:  .5s ease-out;
     -webkit-transition:  .5s ease-out;
     -o-transition:  .5s ease-out;
+    color: black;
 }
-
 .events:hover{
     background-image: url('../images/peter1.jpg');
-    cursor: pointer;
 }
-
 .contact-img{
     margin-top: 30px;
     margin-left: 115px;
     width: 170px;
 }
-
 .contact {
     background-image: url('../images/contact2.jpg');
     background-size: cover;
     border: solid 2px black;
-    cursor: pointer;
     height: 216px;
     width: 335px;
     left: 354px;
     top: 441px;
     bottom: 30px;
-    background-color: white;
     transition:  .5s ease-out;
     -moz-transition:  .5s ease-out;
     -webkit-transition:  .5s ease-out;
@@ -367,7 +324,6 @@ p.about-text {
     font-size: 60px;
 }
 .partners {
-    cursor: pointer;
     height: 216px;
     width: 345px;
     top: 441px;
@@ -381,42 +337,24 @@ p.about-text {
     -moz-transition:  .5s ease-out;
     -webkit-transition:  .5s ease-out;
     -o-transition:  .5s ease-out;
+    color: black;
 }
 
 .partners:hover {
     background-image: url('../images/piano4.jpg');
 }
-
 .partners>h1{
     text-align: center;
     margin-top: 20px;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 120px;
-    color: black;
-;
 }
-
 .partners>h2 {
     text-align: center;
     margin-top: 10px;
     font-family: Raleway-Light, sans-serif;
     font-size: 20px;
-    color: black;
-
 }
-
-.hide {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-}
-
-.click{
-    -webkit-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);
-    -moz-box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);
-    box-shadow: 18px 25px 31px -2px rgba(8,8,8,0.23);
-}
-
 .close {
     position: absolute;
     top: 20px;
@@ -425,12 +363,10 @@ p.about-text {
     opacity:  0.7 !important;
     z-index: 999;
 }
-
 .close:hover {
     cursor: pointer;
     opacity:  0.9 !important;
 }
-
 .facebook-wrapper {
     position:fixed;
     right: -277px;
@@ -441,7 +377,6 @@ p.about-text {
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-
 .facebook-wrapper:hover {
     right: 0;
 }
@@ -460,7 +395,6 @@ p.about-text {
 .footer {
     height: 0;
     background-color: rgb(255,255,255);
-    /*border-top: solid 5px rgb(254, 207, 16);*/
     text-align: center;
     padding-top: 20px;
     font-family: Raleway-Medium, sans-serif ;
@@ -497,7 +431,6 @@ p.about-text {
 }
 
 @media screen and (max-width: 1050px){
-
     .menu-wrapper {
         width: 100%;
     }
@@ -515,22 +448,19 @@ p.about-text {
         margin-left: -50px;
     }
     .tiles.about, .tiles.tickets, .contact.tiles, .artists.tiles, .partners.tiles, .events.tiles{
-        left: 0px;
+        left: 0;
         position: relative;
         width:95vw;
         height: 200px;
         margin: 10px;
     }
-
     .fb_page, .fb_iframe_widget_fluid, .fb_iframe_widget{
         display: none !important;
     }
-
     .lightContainer, .tilesContainer {
         height: 100%;
         width: 100%;
     }
-
     .tickets, .contact, .partners, .events, .artists, .about {
         top: 0;
     }
@@ -542,32 +472,27 @@ p.about-text {
         z-index: 1;
     }
     .about-img-small{
-
        left: 70%;
     }
-
     .contact-title {
         left:55%;
     }
     .contact-img {
      margin-left: 20%;
     }
-    .big>h1, .big>h2 {
+    .big>h1, .big>h2, .text-about {
         position: relative;
         top: 0;
         left: 7%;
         max-width: 55%;
     }
-
     .big>p {
         position: relative;
         margin-left: 7%;
     }
-
     .events>h1 {
         margin-top: 20px;
     }
-
     .close {
         position: relative;
         margin-top: 5px;
@@ -669,6 +594,5 @@ p.about-text {
     .mainDate {
         font-size: 18px;
         left: -90px;
-        /*top: 200px;*/
     }
 }
