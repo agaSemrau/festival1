@@ -149,6 +149,7 @@ $('document').ready(function(){
         $(this).addClass('big');
         $(this).find('.text').removeClass('hide');
         $(this).find('.about-img-small').removeClass('hide');
+        $('.about-img-small').show();
 
         if ($(this).hasClass('about')) {
             $('.about-nav').addClass('hide');
@@ -191,33 +192,69 @@ $('document').ready(function(){
         }
         else if($(this).hasClass('close-artists')){
             $(this).parent().addClass('artists');
-            $(this).parent().find('.about-img-small').addClass('hide');
         }
         else if($(this).hasClass('close-contact')){
             $(this).parent().addClass('contact');
-            $(this).parent().find('.about-img-small').addClass('hide');
             $('.contact-img').removeClass('hide');
             $('.contact-title').addClass('rotated');
         }
         else if($(this).hasClass('close-tickets')){
             $(this).parent().addClass('tickets');
-            $(this).parent().find('.about-img-small').addClass('hide');
         }
         else if($(this).hasClass('close-events')){
             $(this).parent().addClass('events');
-            $(this).parent().find('.about-img-small').addClass('hide');
         }
         else {
             $(this).parent().addClass('partners');
-            $(this).parent().find('.about-img-small').addClass('hide');
         }
+        $('.about-img-small').hide();
     });
 
 
+    $(document).on("click" , '.logoAnimatedSmall' , function(){
+        $('.tiles').fadeIn();
+        $('.close').addClass('hide');
+        $('.text').addClass('hide');
+       
+        if($('.big h1').hasClass('artists-head')){
+            $('.big').addClass('artists');
+            $('.artists').removeClass('big');
+        }
+
+        if($('.big h1').hasClass('text-about')){
+            $('.big').addClass('about');
+            $('.about').removeClass('big');
+            $('.img-about').removeClass('about-img-small');
+            $('.about-nav').removeClass('hide');
+        }
+
+        if($('.big h1').hasClass('tickets-head')){
+            $('.big').addClass('tickets');
+            $('.tickets').removeClass('big');
+        }
+
+        if($('.big h1').hasClass('contact-title')){
+            $('.big').addClass('contact');
+            $('.contact-img').removeClass('hide');
+            $('.contact-title').addClass('rotated');
+            $('.contact').removeClass('big');
+        }
+
+        if($('.big h1').hasClass('events-head')){
+            $('.big').addClass('events');
+            $('.events').removeClass('big');
+        }
+
+        if($('.big h1').hasClass('partners-heading')){
+            $('.big').addClass('partners');
+            $('.partners').removeClass('big');
+        }
+
+        $('.about-img-small').hide();
+    });
 
 
     $('.contact').mouseenter(function(){
-        // $('.contact-img').fadeOut(600);
         $('.contact-img').animate({
             marginTop: "-50px",
             opacity: "0"
@@ -231,7 +268,6 @@ $('document').ready(function(){
             marginTop: "30px",
             opacity: "1"
         }, 200)
-
     });
 
 

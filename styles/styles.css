@@ -80,6 +80,10 @@ body {
     padding-top: 12vh;
 }
 
+.logoAnimatedSmall:hover{
+    cursor:pointer;
+}
+
 /*----------------------------KONTENER Z KAFELKAMI I KAFELKI------------------------------*/
 .lightContainer {
     height: 0;
