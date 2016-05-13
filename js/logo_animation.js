@@ -290,8 +290,6 @@ $('.tilesContainer').click(function (event){
     });
 
 
-
-
     $('.partners').mouseenter(function() {
         $('.partners-heading').textillate({ in: { effect: 'flip',  shuffle: true } }).textillate('start');
 
