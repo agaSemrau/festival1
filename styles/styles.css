@@ -21,6 +21,9 @@ body {
     top: -9999px;
     left: -9999px;
 }
+a{
+    color: black !important;
+}
 /*----------------------------LOGO------------------------------*/
 .animatedLogo {
     margin: auto;
@@ -104,10 +107,10 @@ body {
     position: absolute;
 }
 .about, .artists, .partners, .contact, .events, .tickets{
-    transition:  .5s ease-out;
-    -moz-transition:  .5s ease-out;
-    -webkit-transition:  .5s ease-out;
-    -o-transition:  .5s ease-out;
+    transition:  .5s ease-in;
+    -moz-transition:  .5s ease-in;
+    -webkit-transition:  .5s ease-in;
+    -o-transition:  .5s ease-in;
     border: solid 1px black;
 }
 .about:hover, .artists:hover, .partners:hover, .contact:hover, .events:hover, .tickets:hover  {

@@ -186,9 +186,10 @@ $('.tilesContainer').click(function (event){
             height: 280 + $('.big').height()
                 }, 300);
     });
-
+ 
 
     $(document).on("click" , '.close' , function(){
+
         $(this).parent().removeClass('tiles');
         $('.tiles').fadeIn(0);
         $(this).parent().addClass('tiles');
@@ -289,29 +290,17 @@ $('.tilesContainer').click(function (event){
         }, 200)
     });
 
-
-    $('.partners').mouseenter(function() {
-        $('.partners-heading').textillate({ in: { effect: 'flip',  shuffle: true } }).textillate('start');
+    $('.partners, .about, .artists, .tickets, .events').mouseenter(function() {
+        $(this).find('h1, h2').textillate({ in: { effect: 'flip',  shuffle: true, delay: 100   } }).textillate('start');
 
     });
 
     $('.about').mouseenter(function() {
-        $('.about-heading').textillate({ in: { effect: 'flip',  shuffle: true  } }).textillate('start');
+        $('.about-heading').textillate({ in: { effect: 'flip',  shuffle: true, delay: 100   } }).textillate('start');
 
     });
 
-    $('.artists').mouseenter(function() {
-        $('.artists-head').textillate({ in: { effect: 'flip',  shuffle: true  } }).textillate('start');
 
-    });
-    $('.tickets').mouseenter(function() {
-        $('.tickets-head').textillate({ in: { effect: 'flip',  shuffle: true  } }).textillate('start');
-
-    });
-    $('.events').mouseenter(function() {
-        $('.events-head').textillate({ in: { effect: 'flip',  shuffle: true  } }).textillate('start');
-
-    });
 
 
 
@@ -328,6 +317,30 @@ $('.tilesContainer').click(function (event){
             $(this).parent().find('p').toggleClass('hide');
             $(this).toggleClass('reverted');
         });
+
+
+
+    jQuery(document).ready(function($) {
+
+        if (window.history && window.history.pushState) {
+
+            $(window).on('popstate', function() {
+                var hashLocation = location.hash;
+                var hashSplit = hashLocation.split("#!/");
+                var hashName = hashSplit[1];
+
+                if (hashName !== '') {
+                    var hash = window.location.hash;
+                    if (hash === '') {
+                        alert('Back button was pressed.');
+                    }
+                }
+            });
+
+            window.history.pushState('forward', null, '#');
+        }
+    //
+    });
 
 
 });
