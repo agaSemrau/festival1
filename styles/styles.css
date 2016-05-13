@@ -125,12 +125,12 @@ hr {
     overflow-x: hidden;
     cursor: default;
 }
-.big>h1 {
+.big>h1, .big>h2  {
     font-family: Mathlete Bulky, sans-serif;
     font-size: 80px;
     margin-left: 7%;
 }
-.big h2 {
+.big h3 {
     font-family: Raleway-Light, sans-serif;
     font-size: 18px;
     margin-left: 7%;
@@ -204,13 +204,13 @@ hr {
 .artists:hover {
     background-image: url('../images/reilly1.jpg');
 }
-.artists h1{
+.artists h2{
     text-align: center;
     margin-top: 20px;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 90px;
 }
-.artists>h2{
+.artists>h3{
     text-align: center;
     margin-top: 10px;
     font-family: Raleway-Light, sans-serif;
@@ -252,19 +252,19 @@ hr {
 .tickets:hover {
     background-image: url('../images/shore3.jpg');
 }
-.tickets>h1, .events>h1 {
+.tickets>h2, .events>h2 {
     text-align: center;
     margin-top: 20px;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 120px;
 }
-.tickets>h2, .events>h2 {
+.tickets>h3, .events>h3 {
     text-align: center;
     margin-top: 10px;
     font-family: Raleway-Light, sans-serif;
     font-size: 20px;
 }
-.events>h1 {
+.events>h2 {
     margin-top: 130px;
     font-size: 90px;
 }
@@ -347,13 +347,13 @@ hr {
 .partners:hover {
     background-image: url('../images/piano4.jpg');
 }
-.partners>h1{
+.partners>h2{
     text-align: center;
     margin-top: 20px;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 120px;
 }
-.partners>h2 {
+.partners>h3 {
     text-align: center;
     margin-top: 10px;
     font-family: Raleway-Light, sans-serif;
@@ -484,7 +484,7 @@ hr {
     .contact-img {
      margin-left: 20%;
     }
-    .big>h1, .big>h2, .text-about {
+    .big>h1, .big>h3, .big>h2,.text-about {
         position: relative;
         top: 0;
         left: 7%;
@@ -494,7 +494,7 @@ hr {
         position: relative;
         margin-left: 7%;
     }
-    .events>h1 {
+    .events>h2 {
         margin-top: 20px;
     }
     .close {
