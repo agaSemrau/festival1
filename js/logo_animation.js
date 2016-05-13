@@ -140,13 +140,13 @@ $('document').ready(function(){
             }, 300)
     });
 
-$('.tilesContainer').click(function (event){
-    var target = $( event.target );
-    console.log(target.parent())
-    $('html, body').animate ({
-        scrollTop: target.parent().offset().top - 20
-    }, 300)
-});
+// $('.tilesContainer').click(function (event){
+//     var target = $( event.target );
+//     console.log(target.parent())
+//     $('html, body').animate ({
+//         scrollTop: 0
+//     }, 300)
+// });
     
     $('.tiles').click(function () {
         $(this).removeClass('tiles');
@@ -290,15 +290,15 @@ $('.tilesContainer').click(function (event){
         }, 200)
     });
 
-    $('.partners, .about, .artists, .tickets, .events').mouseenter(function() {
-        $(this).find('h1, h2').textillate({ in: { effect: 'flip',  shuffle: true, delay: 100   } }).textillate('start');
-
-    });
-
-    $('.about').mouseenter(function() {
-        $('.about-heading').textillate({ in: { effect: 'flip',  shuffle: true, delay: 100   } }).textillate('start');
-
-    });
+    // $('.partners, .about, .artists, .tickets, .events').mouseenter(function() {
+    //     $(this).find('h1, h2').textillate({ in: { effect: 'flip',  shuffle: true, delay: 100   } }).textillate('start');
+    //
+    // });
+    //
+    // $('.about').mouseenter(function() {
+    //     $('.about-heading').textillate({ in: { effect: 'flip',  shuffle: true, delay: 100   } }).textillate('start');
+    //
+    // });
 
 
 
@@ -320,27 +320,27 @@ $('.tilesContainer').click(function (event){
 
 
 
-    jQuery(document).ready(function($) {
-
-        if (window.history && window.history.pushState) {
-
-            $(window).on('popstate', function() {
-                var hashLocation = location.hash;
-                var hashSplit = hashLocation.split("#!/");
-                var hashName = hashSplit[1];
-
-                if (hashName !== '') {
-                    var hash = window.location.hash;
-                    if (hash === '') {
-                        alert('Back button was pressed.');
-                    }
-                }
-            });
-
-            window.history.pushState('forward', null, '#');
-        }
+    // jQuery(document).ready(function($) {
     //
-    });
+    //     if (window.history && window.history.pushState) {
+    //
+    //         $(window).on('popstate', function() {
+    //             var hashLocation = location.hash;
+    //             var hashSplit = hashLocation.split("#!/");
+    //             var hashName = hashSplit[1];
+    //
+    //             if (hashName !== '') {
+    //                 var hash = window.location.hash;
+    //                 if (hash === '') {
+    //                     alert('Back button was pressed.');
+    //                 }
+    //             }
+    //         });
+    //
+    //         window.history.pushState('forward', null, '#');
+    //     }
+    //
+    // });
 
 
 });
