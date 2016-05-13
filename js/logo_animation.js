@@ -131,7 +131,7 @@ $('document').ready(function(){
             .removeClass('hide')
             .animate({
                 display: "block",
-                height: $('.lightContainer').get(0).scrollHeight
+                height: "100%"
             }, 300);
 
         $('.footer')
@@ -183,7 +183,7 @@ $('.tilesContainer').click(function (event){
         }
 
         $('.lightContainer').animate({
-            height: 290 + $('.big').height()
+            height: 280 + $('.big').height()
                 }, 300);
     });
 
