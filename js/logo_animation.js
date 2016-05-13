@@ -131,7 +131,7 @@ $('document').ready(function(){
             .removeClass('hide')
             .animate({
                 display: "block",
-                height: "100%"
+                height: $('.lightContainer').get(0).scrollHeight
             }, 300);
 
         $('.footer')
@@ -140,8 +140,15 @@ $('document').ready(function(){
             }, 300)
     });
 
+$('.tilesContainer').click(function (event){
+    var target = $( event.target );
+    console.log(target.parent())
+    $('html, body').animate ({
+        scrollTop: target.parent().offset().top - 20
+    }, 300)
+});
+    
     $('.tiles').click(function () {
-        $("html, body").animate({ scrollTop: "140px" }, 300);
         $(this).removeClass('tiles');
         $('.tiles').fadeOut(0);
         $('.close').removeClass('hide');
@@ -174,6 +181,10 @@ $('document').ready(function(){
         if ($(this).hasClass('events')){
             $(this).removeClass('events', 0);
         }
+
+        $('.lightContainer').animate({
+            height: 290 + $('.big').height()
+                }, 300);
     });
 
 
@@ -208,6 +219,10 @@ $('document').ready(function(){
             $(this).parent().addClass('partners');
         }
         $('.about-img-small').hide();
+
+        $('.lightContainer').animate({
+           height: "100%"
+        }, 300);
     });
 
 
@@ -251,6 +266,10 @@ $('document').ready(function(){
         }
 
         $('.about-img-small').hide();
+
+        $('.lightContainer').animate({
+            height: "100%"
+        }, 300);
     });
 
 
@@ -306,12 +325,11 @@ $('document').ready(function(){
         $(this).find(':nth-child(2)').animate({
             height: "0"}, 400)
     });
+
     $('.peterArrow, .reillyArrow').click(function(){
-        $(this).parent().find('p').toggleClass('hide');
-        $(this).toggleClass('reverted');
-        $('.big').animate({
-            scrollTop: $(this).parent().offset().top
-        })
-    });
+            $(this).parent().find('p').toggleClass('hide');
+            $(this).toggleClass('reverted');
+        });
+
 
 });
