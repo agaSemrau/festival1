@@ -23,6 +23,12 @@ body {
 }
 a{
     color: black !important;
+    text-decoration: none !important;
+}
+
+a:hover, a:focus {
+    color: black !important;
+    text-decoration: none !important;
 }
 /*----------------------------LOGO------------------------------*/
 .animatedLogo {
@@ -34,6 +40,7 @@ a{
     background-size: cover;
     position: relative;
 }
+
 .waves {
     width: 175px;
     height: 25px;
@@ -45,20 +52,24 @@ a{
     top: 210px;
     left: 130px;
 }
+
 .blue_wave{
     background-image: url("../images/blue-wav.jpg");
     top: 240px;
     left: 130px;
 }
+
 .yellow_wave{
     background-image: url("../images/yellow-wav.jpg");
     top: 270px;
     left: 130px;
 }
+
 .darkContainer {
     height: 100vh;
     background-color: black;
 }
+
 .mainDate, .animatedDate {
     color: white;
     font-family: Mathlete Bulky, sans-serif;
@@ -69,6 +80,7 @@ a{
     letter-spacing: 3px;
     margin-top: 0;
 }
+
 .contact-data {
     margin-left: 50%;
     left: -350px;
@@ -83,7 +95,6 @@ a{
     margin:auto;
     padding-top: 12vh;
 }
-
 .logoAnimatedSmall:hover{
     cursor:pointer;
 }
@@ -102,335 +113,6 @@ a{
     width: 996px;
     position:relative;
 }
-.tiles {
-    background-color: white;
-    position: absolute;
-}
-.about, .artists, .partners, .contact, .events, .tickets{
-    transition:  .5s ease-in;
-    -moz-transition:  .5s ease-in;
-    -webkit-transition:  .5s ease-in;
-    -o-transition:  .5s ease-in;
-    border: solid 1px black;
-}
-.about:hover, .artists:hover, .partners:hover, .contact:hover, .events:hover, .tickets:hover  {
-    /*-webkit-box-shadow: 10px 20px 31px -4px rgba(8,8,8,0.27);*/
-    /*-moz-box-shadow: 10px 20px 31px -4px rgba(8,8,8,0.27);*/
-    /*box-shadow: 10px 20px 31px -4px rgba(8,8,8,0.27);*/
-    cursor: pointer;
-    transform: scale(0.97);
-}
-hr {
-    width: 85%;
-}
-.big{
-    margin:auto;
-    top: 10px;
-    min-height: 660px;
-    height:auto;
-    width: 996px;
-    -webkit-box-shadow: 28px 31px 31px 0 rgba(8,8,8,0.12);
-    -moz-box-shadow: 28px 31px 31px 0 rgba(8,8,8,0.12);
-    -shadow: 28px 31px 31px 0 rgba(8,8,8,0.12);
-    background-color: white;
-    padding: 2%;
-    overflow-y:hidden;
-    overflow-x: hidden;
-    cursor: default;
-    margin-bottom: 130px;
-}
-.big>h1, .big>h2  {
-    font-family: Mathlete Bulky, sans-serif;
-    font-size: 80px;
-    margin-left: 7%;
-}
-.big h3 {
-    font-family: Raleway-Light, sans-serif;
-    font-size: 18px;
-    margin-left: 7%;
-}
-.big p {
-    font-family: Raleway-Light, sans-serif;
-    line-height: 19px;
-    font-size: 13px;
-    margin-left: 7%;
-    margin-right: 7%;
-    text-align: justify;
-}
-.about-img-small{
-    position: absolute;
-    top: 40px;
-    left: 760px;
-    height: 140px !important;
-}
-.about {
-    height: 420px;
-    width: 344px;
-    top: 10px;
-
-
-}
-.about:hover {
-    transform: scale(0.97);
-}
-.text-about {
-    margin-top: 10px;
-    margin-left: 7%;
-    width: 100%;
-    font-family: Mathlete Bulky, sans-serif;
-    font-size: 60px;
-    display: inline-block;
-}
-.img-about {
-    height: 340px;
-}
-.about-nav {
-    width: 100%;
-    position:absolute;
-    bottom: 0;
-    color: white;
-    height:80px;
-    background-color: black;
-    font-family: Raleway-Light, sans-serif;
-    font-size: 20px;
-    text-align: center;
-    padding-top: 25px;
-}
-.about-text{
-    font-family: Raleway-Medium, sans-serif;
-}
-.reverted {
-    transform: perspective( 400px ) rotateX(180deg);
-}
-.artists {
-    /*border: solid 2px black;*/
-    height: 195px;
-    width: 621px;
-    left: 354px;
-    top: 10px;
-    color: black;
-    background-image: url('../images/reilly2.jpg');
-    background-size: cover;
-    background-position: 50% 50%;
-    /*transition:  .5s ease-out;*/
-    /*-moz-transition:  .5s ease-out;*/
-    /*-webkit-transition:  .5s ease-out;*/
-    /*-o-transition:  .5s ease-out;*/
-}
-.artists:hover {
-    background-image: url('../images/reilly1.jpg');
-    transform: scale(0.97);
-}
-.artists h2{
-    text-align: center;
-    margin-top: 20px;
-    font-family: Mathlete Bulky, sans-serif;
-    font-size: 90px;
-}
-.artists>h3{
-    text-align: center;
-    margin-top: 10px;
-    font-family: Raleway-Light, sans-serif;
-    font-size: 20px;
-}
-.artists-img {
-    margin-left: 7%;
-    padding: 10px 0 10px;
-    width: 86%;
-}
-.peterArrow {
-    margin-left: 7%;
-    margin-top: -88px;
-    width: 86%;
-    height: 0;
-    cursor: pointer;
-}
-.reillyArrow {
-    margin-left: 7%;
-    margin-top: -88px;
-    width: 86%;
-    height: 0;
-    cursor: pointer;
-}
-.tickets {
-    background-image: url('../images/shore2.jpg');
-    background-position: 50% 50%;
-    background-size: cover;
-    /*border: 2px solid black;*/
-    height: 216px;
-    width: 335px;
-    left: 354px;
-    top: 215px;
-    color: black;
-    /*transition:  0.5s ease-out;*/
-    /*-moz-transition:  0.5s ease-out;*/
-    /*-webkit-transition:  0.5s ease-out;*/
-    /*-o-transition:  0.5s ease-out;*/
-}
-.tickets:hover {
-    background-image: url('../images/shore3.jpg');
-    transform: scale(0.97);
-}
-.tickets>h2, .events>h2 {
-    text-align: center;
-    margin-top: 20px;
-    font-family: Mathlete Bulky, sans-serif;
-    font-size: 120px;
-}
-.tickets>h3, .events>h3 {
-    text-align: center;
-    margin-top: 10px;
-    font-family: Raleway-Light, sans-serif;
-    font-size: 20px;
-}
-.events>h2 {
-    margin-top: 130px;
-    font-size: 90px;
-}
-.events {
-    height: 444px;
-    width: 277px;
-    left: 699px;
-    top: 215px;
-    bottom: 30px;
-    /*border: solid 2px black;*/
-    background-image: url('../images/peterw.jpg');
-    background-position: 50% 50%;
-    background-size: cover;
-    /*transition:  .5s ease-out;*/
-    /*-moz-transition:  .5s ease-out;*/
-    /*-webkit-transition:  .5s ease-out;*/
-    /*-o-transition:  .5s ease-out;*/
-    color: black;
-}
-.events:hover{
-    background-image: url('../images/peter1.jpg');
-    transform: scale(0.97);
-}
-.contact-img{
-    margin-top: 30px;
-    margin-left: 115px;
-    width: 170px;
-}
-.contact {
-    background-image: url('../images/contact2.jpg');
-    background-position: 50% 50%;
-    background-size: cover;
-    /*border: solid 2px black;*/
-    height: 216px;
-    width: 335px;
-    left: 354px;
-    top: 441px;
-    bottom: 30px;
-    /*transition:  .5s ease-out;*/
-    /*-moz-transition:  .5s ease-out;*/
-    /*-webkit-transition:  .5s ease-out;*/
-    /*-o-transition:  .5s ease-out;*/
-}
-.contact:hover {
-    background-image: url('../images/contact1.jpg');
-    transform: scale(0.97);
-}
-.contact-title {
-    margin-top: 20px;
-    font-family: Mathlete Bulky, sans-serif;
-    font-size: 120px;
-}
-.rotated {
-    margin-top: 80px;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    position:absolute;
-    margin-left: 5px;
-    display: inline-block;
-    color:black;
-    font-family: Mathlete Bulky, sans-serif;
-    font-size: 60px;
-}
-.partners {
-    height: 216px;
-    width: 345px;
-    top: 441px;
-    bottom: 30px;
-    font-family: Mathlete Bulky, sans-serif;
-    font-size: 60px;
-    background-image: url('../images/piano3.jpg');
-    background-position: 50% 50%;
-    background-size: cover;
-    /*border: solid 2px black;*/
-    /*transition:  .5s ease-out;*/
-    /*-moz-transition:  .5s ease-out;*/
-    /*-webkit-transition:  .5s ease-out;*/
-    /*-o-transition:  .5s ease-out;*/
-    color: black;
-}
-
-.partners:hover {
-    background-image: url('../images/piano4.jpg');
-    transform: scale(0.97);
-}
-.partners>h2{
-    text-align: center;
-    margin-top: 20px;
-    font-family: Mathlete Bulky, sans-serif;
-    font-size: 120px;
-}
-.partners>h3 {
-    text-align: center;
-    margin-top: 10px;
-    font-family: Raleway-Light, sans-serif;
-    font-size: 20px;
-}
-.close {
-    position: absolute;
-    top: 20px;
-    left: 935px;
-    font-size: 16px;
-    opacity:  0.7 !important;
-    z-index: 999;
-}
-.close:hover {
-    cursor: pointer;
-    opacity:  0.9 !important;
-}
-.facebook-wrapper {
-    position:fixed;
-    right: -277px;
-    top: 480px;
-    margin-top: -320px;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-}
-.facebook-wrapper:hover {
-    right: 0;
-}
-.facebook-logo {
-    background-image: url('../images/fblogo.png');
-    height: 60px;
-    width:60px;
-    position: relative;
-    top: 0;
-    margin-left: -60px;
-}
- iframe {
-     margin-top: -56px;
- }
-
-.footer {
-    height: 0;
-    background-color: rgb(255,255,255);
-    text-align: center;
-    padding-top: 20px;
-    font-family: Raleway-Medium, sans-serif ;
-}
-
-
-
 /*------------------------------Media queries--------------------------------------*/
 @media screen and (min-width: 1600px){
     .animatedLogo {
@@ -445,6 +127,7 @@ hr {
         top: 240px;
         left: 153px;
     }
+	
     .blue_wave{
         top: 280px;
         left: 153px;
@@ -470,69 +153,13 @@ hr {
         margin-top: -18%;
         text-align: center;
     }
-    .img-about {
-        height:  100px;
-        position:absolute;
-        left: 50%;
-        margin-left: -50px;
-    }
-    .tiles.about, .tiles.tickets, .contact.tiles, .artists.tiles, .partners.tiles, .events.tiles{
-        left: 0;
-        position: relative;
-        width:95vw;
-        height: 200px;
-        margin: 10px;
-    }
-    .fb_page, .fb_iframe_widget_fluid, .fb_iframe_widget{
-        display: none !important;
-    }
+
     .lightContainer, .tilesContainer {
         min-height: 100%;
         height:auto;
         width: 100%;
     }
-    .tickets, .contact, .partners, .events, .artists, .about {
-        top: 0;
-    }
-    .tiles.big {
-        position: relative;
-        max-width: 90%;
-        margin:auto;
-        height: auto;
-        z-index: 1;
-    }
-    .about-img-small{
-       left: 70%;
-    }
-    .contact-title {
-        left:55%;
-    }
-    .contact-img {
-     margin-left: 30%;
-    }
-    .events{
-        background-position: 50% 30%;
-    }
-    .big>h1, .big>h3, .big>h2,.text-about {
-        position: relative;
-        top: 0;
-        left: 7%;
-        max-width: 55%;
-    }
-    .big>p {
-        position: relative;
-        margin-left: 7%;
-    }
-    .events>h2 {
-        margin-top: 20px;
-    }
-    .close {
-        position: relative;
-        margin-top: 5px;
-        margin-right: 5px;
-        top:0;
-        left: 0;
-    }
+	
     .animatedDate{
         left: auto !important;
         margin-left: auto;

@@ -1,0 +1,644 @@
+/*----------------------------LOGO------------------------------*/
+
+.animatedLogoXY {
+    background-image: url("../images/jazz-black-no-wave.jpg");
+    background-size: cover;
+    position: relative;
+    height: 83px;
+    width: 83px;
+    margin-left: 0;
+    top: -10px;
+    cursor: pointer;
+}
+
+.animatedOrange {
+    background-image: url("../images/orange-wav.jpg");
+    height: 6px;
+    width: 40px;
+    left: 25px;
+    top: 42px;
+    position: absolute;
+    background-size: cover;
+}
+
+.animatedBlue {
+    background-image: url("../images/blue-wav.jpg");
+    height: 6px;
+    width: 40px;
+    left: 25px;
+    top: 49px;
+    position: absolute;
+    background-size: cover;
+}
+
+.animatedYellow {
+    background-image: url("../images/yellow-wav.jpg");
+    height: 6px;
+    width: 40px;
+    left: 25px;
+    top: 56px;
+    position: absolute;
+    background-size: cover;
+}
+
+.animatedDark {
+    background-color: black;
+    height: 95px;
+    padding-top: 15px;
+}
+
+.veryAnimatedDate {
+    position: absolute;
+    font-size: 60px;
+    top: 0;
+    left: 2vw;
+    color: white;
+    font-family: Mathlete Bulky, sans-serif;
+    margin-left: 50%;
+}
+
+.animatedWrapper {
+    margin: auto;
+    width: 1000px;
+    height: 95px;
+    padding-top: 0;
+}
+
+/*----------------------------KONTENER Z KAFELKAMI I KAFELKI------------------------------*/
+.bold {
+    font-weight: bold;
+}
+
+.text {
+    margin-left: 7%;
+    font-family: Raleway-Light, sans-serif;
+}
+
+.text > li {
+    line-height: 30px;
+    margin-right: 70px;
+    text-align: justify;
+    list-style: none;
+}
+
+.text > li:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    background-image: url('../images/white-waves-small.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 8px 5px 0 0;
+    position: absolute;
+    left: 9%;
+}
+
+.link, .link:visited {
+    color: #f47222 !important;
+}
+
+.link:hover {
+    font-weight: bold;
+    color: #f47222 !important;
+}
+
+.animatedLightContainer {
+    display: block;
+    height: 100%;
+    background-color: rgb(244, 244, 244);
+    padding-top: 4.4%;
+    padding-bottom: 4.5%;
+}
+
+.tiles {
+    background-color: white;
+    position: absolute;
+}
+
+.about, .artists, .partners, .contact, .events, .tickets {
+    transition: .4s ease-in;
+    -moz-transition: .4s ease-in;
+    -webkit-transition: .4s ease-in;
+    -o-transition: .4s ease-in;
+    border: solid 1px black;
+}
+
+.about:hover, .artists:hover, .partners:hover, .contact:hover, .events:hover, .tickets:hover {
+    cursor: pointer;
+    transform: scale(0.97);
+}
+
+hr {
+    width: 85%;
+}
+
+.big {
+    margin: auto;
+    top: 10px;
+    min-height: 660px;
+    height: auto;
+    width: 996px;
+    -webkit-box-shadow: 28px 31px 31px 0 rgba(8, 8, 8, 0.12);
+    -moz-box-shadow: 28px 31px 31px 0 rgba(8, 8, 8, 0.12);
+    -shadow: 28px 31px 31px 0 rgba(8, 8, 8, 0.12);
+    background-color: white;
+    padding: 2%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    cursor: default;
+    margin-bottom: 130px;
+    color: black;
+}
+
+.big > h1, .big > h2 {
+    font-family: Mathlete Bulky, sans-serif;
+    font-size: 80px;
+    margin-left: 7%;
+}
+
+.big h3 {
+    font-family: Raleway-Light, sans-serif;
+    font-size: 18px;
+    margin-left: 7%;
+}
+
+.big p {
+    font-family: Raleway-Light, sans-serif;
+    line-height: 19px;
+    font-size: 13px;
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: justify;
+}
+
+.about-img-small {
+    position: absolute;
+    top: 40px;
+    left: 760px;
+    height: 140px !important;
+}
+
+.about {
+    height: 420px;
+    width: 344px;
+    top: 10px;
+}
+
+.about:hover {
+    transform: scale(0.97);
+}
+
+.text-about {
+    margin-top: 10px;
+    margin-left: 7%;
+    width: 100%;
+    font-family: Mathlete Bulky, sans-serif;
+    font-size: 60px;
+    display: inline-block;
+}
+
+.img-about {
+    height: 340px;
+}
+
+.about-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    height: 80px;
+    background-color: black;
+    font-family: Raleway-Light, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.about-text {
+    font-family: Raleway-Medium, sans-serif;
+}
+
+.reverted {
+    transform: perspective(400px) rotateX(180deg);
+}
+
+.artists {
+    height: 195px;
+    width: 621px;
+    left: 354px;
+    top: 10px;
+    color: black;
+    background-image: url('../images/reilly2.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.artists:hover {
+    background-image: url('../images/reilly1.jpg');
+    transform: scale(0.97);
+}
+
+.artists h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Mathlete Bulky, sans-serif;
+    font-size: 90px;
+}
+
+.artists > h3 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: Raleway-Light, sans-serif;
+    font-size: 20px;
+}
+
+.artists-img {
+    margin-left: 7%;
+    padding: 10px 0 10px;
+    width: 86%;
+}
+
+.reilly-wrapper, .peter-wrapper {
+    position: relative;
+}
+
+.peterArrow, .reillyArrow {
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+}
+
+.arrow-wrapper {
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 10px;
+    width: 86%;
+    margin-left: 7%;
+    cursor: pointer;
+}
+
+.artists-img:hover {
+    cursor: pointer;
+}
+
+.tickets {
+    background-image: url('../images/shore2.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 216px;
+    width: 335px;
+    left: 354px;
+    top: 215px;
+    color: black;
+}
+
+.tickets:hover {
+    background-image: url('../images/shore3.jpg');
+    transform: scale(0.97);
+}
+
+.tickets > h2, .events > h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Mathlete Bulky, sans-serif;
+    font-size: 120px;
+}
+
+.tickets > h3, .events > h3 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: Raleway-Light, sans-serif;
+    font-size: 20px;
+}
+
+.events > h2 {
+    margin-top: 130px;
+    font-size: 90px;
+}
+
+.events {
+    height: 444px;
+    width: 277px;
+    left: 699px;
+    top: 215px;
+    bottom: 30px;
+    background-image: url('../images/peterw.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    color: black;
+}
+
+.events:hover {
+    background-image: url('../images/peter1.jpg');
+    transform: scale(0.97);
+}
+
+.contact-img {
+    margin-top: 30px;
+    margin-left: 115px;
+    width: 170px;
+}
+
+.contact {
+    background-image: url('../images/contact2.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 216px;
+    width: 335px;
+    left: 354px;
+    top: 441px;
+    bottom: 30px;
+}
+
+.contact:hover {
+    background-image: url('../images/contact1.jpg');
+    transform: scale(0.97);
+}
+
+.contact-title {
+    margin-top: 20px;
+    font-family: Mathlete Bulky, sans-serif;
+    font-size: 120px;
+}
+
+.rotated {
+    margin-top: 80px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    margin-left: 5px;
+    display: inline-block;
+    color: black;
+    font-family: Mathlete Bulky, sans-serif;
+    font-size: 60px;
+}
+
+.partners {
+    height: 216px;
+    width: 345px;
+    top: 441px;
+    bottom: 30px;
+    font-family: Mathlete Bulky, sans-serif;
+    font-size: 60px;
+    background-image: url('../images/piano3.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    color: black;
+}
+
+.partners:hover {
+    background-image: url('../images/piano4.jpg');
+    transform: scale(0.97);
+}
+
+.partners > h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Mathlete Bulky, sans-serif;
+    font-size: 120px;
+}
+
+.partners > h3 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: Raleway-Light, sans-serif;
+    font-size: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    left: 935px;
+    font-size: 16px;
+    opacity: 0.7 !important;
+    z-index: 999;
+}
+
+.close:hover {
+    cursor: pointer;
+    opacity: 0.9 !important;
+}
+
+.facebook-wrapper {
+    position: fixed;
+    right: -277px;
+    top: 480px;
+    margin-top: -320px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.facebook-wrapper:hover {
+    right: 0;
+}
+
+.facebook-logo {
+    background-image: url('../images/fblogo.png');
+    height: 60px;
+    width: 60px;
+    position: relative;
+    top: 0;
+    margin-left: -60px;
+}
+
+iframe {
+    margin-top: -56px;
+}
+
+.footer {
+    height: 0;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 20px;
+    font-family: Raleway-Medium, sans-serif;
+}
+
+.animatedFooter {
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 20px;
+    font-family: Raleway-Medium, sans-serif;
+}
+
+/*------------------------------Media queries--------------------------------------*/
+
+@media screen and (max-width: 1050px) {
+    .menu-wrapper, .animatedWrapper {
+        width: 100%;
+    }
+
+    .contact-data {
+        width: 300px;
+        left: -150px;
+        letter-spacing: 2px;
+        margin-top: -18%;
+        text-align: center;
+    }
+
+    .img-about {
+        height: 100px;
+        position: absolute;
+        left: 50%;
+        margin-left: -50px;
+    }
+
+    .tiles.about, .tiles.tickets, .contact.tiles, .artists.tiles, .partners.tiles, .events.tiles {
+        top: 0;
+        left: 0;
+        position: relative;
+        width: 95vw;
+        height: 200px;
+        margin: 10px;
+    }
+
+    .fb_page, .fb_iframe_widget_fluid, .fb_iframe_widget {
+        display: none !important;
+    }
+
+    .lightContainer, .tilesContainer, .animatedLightContainer {
+        min-height: 100%;
+        height: auto;
+        width: 100%;
+    }
+
+    .big {
+        position: relative;
+        max-width: 90%;
+        margin: auto;
+        height: auto;
+        z-index: 1;
+    }
+
+    .about-img-small {
+        left: 65%;
+        height: 120px !important;
+    }
+
+    .rotated {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    .contact {
+        text-align: center;
+    }
+
+    .contact-title {
+        margin-top: 30px;
+        font-size: 110px;
+    }
+
+    .contact-img {
+        display: none;
+    }
+
+    .events {
+        background-position: 50% 30%;
+    }
+
+    .big > h1, .big > h3, .big > h2, .text-about, .contact-title {
+        position: relative;
+        top: 0;
+        max-width: 55%;
+    }
+
+    .big > p {
+        position: relative;
+        margin-left: 7%;
+    }
+
+    .events > h2 {
+        margin-top: 20px;
+    }
+
+    .close {
+        position: relative;
+        margin-top: 5px;
+        margin-right: 5px;
+        top: 0;
+        left: 0;
+    }
+
+    .veryAnimatedDate {
+        left: auto !important;
+        margin-left: auto;
+        right: 2vw;
+        font-size: 30px !important;
+        top: 20px !important;
+    }
+
+    .facebook-wrapper {
+        display: none;
+    }
+
+    .arrow {
+        width: 40px;
+        top: 50%;
+        margin-top: -20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about-img-small {
+        height: 100px !important;
+        left: 73%;
+        top: 50px;
+    }
+
+    .big > h1, .big > h2, .text-about {
+        font-size: 70px;
+        top: 20px;
+    }
+
+    .arrow-wrapper {
+        height: 22%;
+    }
+
+    .arrow {
+        width: 25px;
+        top: 50%;
+        margin-top: -12px;
+        left: 50%;
+        margin-left: -12px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .tiles.about > h1, .tiles.tickets > h2, .contact.tiles > h1, .artists.tiles > h2, .partners.tiles > h2, .events.tiles > h2 {
+        font-size: 60px;
+        margin-top: 40px
+    }
+
+    .tiles.about > h3, .tiles.tickets > h3, .contact.tiles > h3, .artists.tiles > h3, .partners.tiles > h3, .events.tiles > h3 {
+        font-size: 17px;
+    }
+
+    .big > h1, .big > h2, .text-about {
+        font-size: 50px;
+    }
+
+    .about-img-small {
+        display: none;
+    }
+
+    .facebook-wrapper {
+        display: none;
+    }
+
+    .arrow-wrapper {
+        height: 22%;
+    }
+
+}

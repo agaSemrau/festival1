@@ -1,41 +1,50 @@
-$('document').ready(function(){
-    var myOrangeInterval = false;
-    var myBlueInterval = false;
-    var myYellowInterval = false;
-    var audio = {};
+function CurHash(option) {
+
+}
+
+$('document').ready(function () {
+    //-------------------------------------------------FIRST logo ANIMATION-------------------------------------------
+    var animatedLogo = $('.animatedLogo'),
+            animatedLightContainer = $('.animatedLightContainer'),
+            myOrangeInterval = false,
+            myBlueInterval = false,
+            myYellowInterval = false,
+            audio = {};
     audio["wave"] = new Audio();
 
-
-
-    $('.animatedLogo').mouseenter(function(){
-
-        function orangeAnimate(){$('.orange_wave')
-            .animate({
-                top: "-=2%"
-            }, 500)
-            .animate({
-                top:"+=2%"
-            }, 500);
+    animatedLogo.mouseenter(function () {
+        function orangeAnimate() {
+            $('.orange_wave')
+                    .animate({
+                        top: "-=2%"
+                    }, 500)
+                    .animate({
+                        top: "+=2%"
+                    }, 500);
         }
 
-        function blueAnimate(){setTimeout(function(){
-            $('.blue_wave')
-                .animate({
-                    top: "-=2%"
-                }, 500)
-                .animate({
-                    top:"+=2%"
-                }, 500)}, 200);
+        function blueAnimate() {
+            setTimeout(function () {
+                $('.blue_wave')
+                        .animate({
+                            top: "-=2%"
+                        }, 500)
+                        .animate({
+                            top: "+=2%"
+                        }, 500)
+            }, 200);
         }
 
-        function yellowAnimate() {setTimeout(function(){
-            $('.yellow_wave')
-                .animate({
-                    top: "-=2%"
-                }, 500)
-                .animate({
-                    top:"+=2%"
-                }, 500)}, 300);
+        function yellowAnimate() {
+            setTimeout(function () {
+                $('.yellow_wave')
+                        .animate({
+                            top: "-=2%"
+                        }, 500)
+                        .animate({
+                            top: "+=2%"
+                        }, 500)
+            }, 300);
         }
 
         orangeAnimate();
@@ -49,7 +58,7 @@ $('document').ready(function(){
         // audio["wave"].play();
     });
 
-    $('.animatedLogo').mouseleave(function(){
+    animatedLogo.mouseleave(function () {
 
         clearInterval(myOrangeInterval);
         myOrangeInterval = false;
@@ -63,284 +72,277 @@ $('document').ready(function(){
         // audio["wave"].pause();
     });
 
-
-
-    $('span').click(function(){
-        $('.animatedLogo').addClass('logoAnimatedSmall');
-        $('.blue_wave').stop(true, true );
-        $('.yellow_wave').stop(true, true );
-        $('.orange_wave').stop(true, true );
+    $('span').click(function () {
+        animatedLogo.addClass('logoAnimatedSmall');
+        $('.blue_wave').stop(true, true);
+        $('.yellow_wave').stop(true, true);
+        $('.orange_wave').stop(true, true);
 
         $('.contact-data').addClass("hide");
 
         $('.orange_wave')
-            .animate({
-                height: "6px",
-                width: "40px",
-                left: "25px",
-                top: "42px"
-            }, 1200);
-
+                .addClass('animatedOrange')
+                .animate({
+                    height: "6px",
+                    width: "40px",
+                    left: "25px",
+                    top: "42px"
+                }, 1200);
         $('.blue_wave')
-            .animate({
-                height: "6px",
-                width: "40px",
-                left: "25px",
-                top: "49px"
-            }, 1200);
-
+                .animate({
+                    height: "6px",
+                    width: "40px",
+                    left: "25px",
+                    top: "49px"
+                }, 1200);
         $('.yellow_wave')
-            .animate({
-                height: "6px",
-                width: "40px",
-                left: "25px",
-                top: "56px"
-            }, 1200);
-
+                .animate({
+                    height: "6px",
+                    width: "40px",
+                    left: "25px",
+                    top: "56px"
+                }, 1200);
         $('.darkContainer')
-            .animate({
-                height: "95px",
-                paddingTop: "15px"
-            }, 1200);
-
+                .animate({
+                    height: "95px",
+                    paddingTop: "15px"
+                }, 1200);
         $('.menu-wrapper')
                 .animate({
                     height: "95px",
                     paddingTop: "0"
                 }, 1200);
-
         $('.mainDate')
                 .removeClass('mainDate')
                 .addClass("animatedDate")
-           .animate({
-                position: "relative",
-                fontSize: '60px',
-                top: "0",
-                left: "2vw"
-            }, 500);
-
-        $('.animatedLogo')
-            .animate({
-                height: "83px",
-                width: "83px",
-                marginLeft: "0",
-                top: "-10px"
-            }, 1200);
-
+                .animate({
+                    position: "relative",
+                    fontSize: '60px',
+                    top: "0",
+                    left: "2vw"
+                }, 500);
+        animatedLogo
+                .animate({
+                    height: "83px",
+                    width: "83px",
+                    marginLeft: "0",
+                    top: "-10px"
+                }, 1200);
         $('.lightContainer')
-            .removeClass('hide')
-            .animate({
-                display: "block",
-                height: "100%"
-            }, 300);
-
-        $('.footer')
-            .animate({
-                height: "80px"
-            }, 300)
-    });
-
-// $('.tilesContainer').click(function (event){
-//     var target = $( event.target );
-//     console.log(target.parent())
-//     $('html, body').animate ({
-//         scrollTop: 0
-//     }, 300)
-// });
-    
-    $('.tiles').click(function () {
-        $(this).removeClass('tiles');
-        $('.tiles').fadeOut(0);
-        $('.close').removeClass('hide');
-        $(this).addClass('tiles');
-        $(this).addClass('big');
-        $(this).find('.text').removeClass('hide');
-        $(this).find('.about-img-small').removeClass('hide');
-        $('.about-img-small').show();
-
-        if ($(this).hasClass('about')) {
-            $('.about-nav').addClass('hide');
-            $('.img-about').addClass('about-img-small');
-            $(this).removeClass('about');
-            $('.text-about').textillate({ in: { effect: 'flip',  shuffle: true  } }).textillate('start');
-        }
-        if ($(this).hasClass('artists')) {
-            $(this).removeClass('artists');
-        }
-        if ($(this).hasClass('partners') || $(this).hasClass('test')) {
-            $(this).removeClass('partners', 0);
-        }
-        if ($(this).hasClass('tickets')) {
-            $(this).removeClass('tickets', 0);
-        }
-        if ($(this).hasClass('contact')){
-            $(this).removeClass('contact', 0);
-            $('.contact-img').addClass('hide');
-            $('.contact-title').removeClass('rotated');
-        }
-        if ($(this).hasClass('events')){
-            $(this).removeClass('events', 0);
-        }
-
-        $('.lightContainer').animate({
-            height: 280 + $('.big').height()
+                .removeClass('hide')
+                .animate({
+                    display: "block",
+                    height: "100%"
                 }, 300);
+        $('.footer')
+                .animate({
+                    height: "80px"
+                }, 300)
+        $(":animated").promise().done(function () {
+            location.href = 'indexa.html'
+        });
     });
- 
 
-    $(document).on("click" , '.close' , function(){
-
-        $(this).parent().removeClass('tiles');
-        $('.tiles').fadeIn(0);
-        $(this).parent().addClass('tiles');
-        $(this).parent().removeClass('big');
-        $('.close').addClass('hide');
-        $(this).parent().find('.text').addClass('hide');
-
-        if($(this).hasClass('close-about')){
-            $('.img-about').removeClass('about-img-small');
-            $('.about-nav').removeClass('hide');
-            $(this).parent().addClass('about');
-        }
-        else if($(this).hasClass('close-artists')){
-            $(this).parent().addClass('artists');
-        }
-        else if($(this).hasClass('close-contact')){
-            $(this).parent().addClass('contact');
-            $('.contact-img').removeClass('hide');
-            $('.contact-title').addClass('rotated');
-        }
-        else if($(this).hasClass('close-tickets')){
-            $(this).parent().addClass('tickets');
-        }
-        else if($(this).hasClass('close-events')){
-            $(this).parent().addClass('events');
-        }
-        else {
-            $(this).parent().addClass('partners');
-        }
-        $('.about-img-small').hide();
-
-        $('.lightContainer').animate({
-           height: "100%"
+    //-----------------------------------------------TILES ANIMATION-------------------------------------------------
+    if ($(window).innerHeight() < 1020) {
+        $('.tiles').click(function () {
+            $('html, body').animate({
+                scrollTop: "15"
+            }, 200).animate({
+                scrollTop: "0"
+            }, 400);
+        });
+    }
+    var openPeterWhite = function () {
+        $('.img-about').removeClass('about-img-small');
+        $('#artists-content').fadeIn(600).removeClass('hide');
+        $('#about-content').addClass('hide');
+        $('.tiles').addClass('hide');
+        animatedLightContainer.animate({
+            height: 280 + $('#artists-content').height()
         }, 300);
-    });
-
-
-    $(document).on("click" , '.logoAnimatedSmall' , function(){
-        $('.tiles').fadeIn();
-        $('.close').addClass('hide');
-        $('.text').addClass('hide');
-       
-        if($('.big h1').hasClass('artists-head')){
-            $('.big').addClass('artists');
-            $('.artists').removeClass('big');
-        }
-
-        if($('.big h1').hasClass('text-about')){
-            $('.big').addClass('about');
-            $('.about').removeClass('big');
-            $('.img-about').removeClass('about-img-small');
-            $('.about-nav').removeClass('hide');
-        }
-
-        if($('.big h1').hasClass('tickets-head')){
-            $('.big').addClass('tickets');
-            $('.tickets').removeClass('big');
-        }
-
-        if($('.big h1').hasClass('contact-title')){
-            $('.big').addClass('contact');
-            $('.contact-img').removeClass('hide');
-            $('.contact-title').addClass('rotated');
-            $('.contact').removeClass('big');
-        }
-
-        if($('.big h1').hasClass('events-head')){
-            $('.big').addClass('events');
-            $('.events').removeClass('big');
-        }
-
-        if($('.big h1').hasClass('partners-heading')){
-            $('.big').addClass('partners');
-            $('.partners').removeClass('big');
-        }
-
-        $('.about-img-small').hide();
-
-        $('.lightContainer').animate({
+    };
+    var openMattBianco = function () {
+        $('.img-about').removeClass('about-img-small');
+        $('#artists-content').fadeIn(600).removeClass('hide');
+        $('#about-content').addClass('hide');
+        $('.tiles').addClass('hide');
+        animatedLightContainer.animate({
+            height: 280 + $('#artists-content').height()
+        }, 300);
+    };
+    var openAbout = function () {
+        $('#artists-content').addClass('hide');
+        $('#about-content').fadeIn(600).removeClass('hide');
+        $('.tiles').addClass('hide');
+        $('.img-about').addClass('about-img-small');
+        animatedLightContainer.animate({
+            height: 280 + $('#about-content').height()
+        }, 300);
+    };
+    var openArtists = function () {
+        $('#artists-content').fadeIn(600).removeClass('hide');
+        $('.tiles').addClass('hide');
+        animatedLightContainer.animate({
+            height: 280 + $('#artists-content').height()
+        }, 300);
+    };
+    var openTickets = function () {
+        $('#tickets-content').fadeIn(600).removeClass('hide');
+        $('.tiles').addClass('hide');
+        animatedLightContainer.animate({
+            height: 280 + $('#tickets-content').height()
+        }, 300);
+    };
+    var openEvents = function () {
+        $('#events-content').fadeIn(600).removeClass('hide');
+        $('.tiles').addClass('hide');
+        animatedLightContainer.animate({
+            height: 280 + $('#events-content').height()
+        }, 300);
+    };
+    var openPartners = function () {
+        $('#partners-content').fadeIn(600).removeClass('hide');
+        $('.tiles').addClass('hide');
+        animatedLightContainer.animate({
+            height: 280 + $('#partners-content').height()
+        }, 300);
+    };
+    var openContact = function () {
+        $('#contact-content').fadeIn(600).removeClass('hide');
+        $('.contact-title').removeClass('rotated');
+        $('.tiles').addClass('hide');
+        animatedLightContainer.animate({
+            height: 280 + $('#contact-content').height()
+        }, 300);
+    };
+    var tilesView = function () {
+        $('#tickets-content').fadeOut(300).addClass('hide')
+        $('#artists-content').fadeOut(300).addClass('hide')
+        $('#about-content').fadeOut(300).addClass('hide')
+        $('#partners-content').fadeOut(300).addClass('hide')
+        $('#contact-content').fadeOut(300).addClass('hide')
+        $('#events-content').fadeOut(300).addClass('hide')
+        $('.img-about').removeClass('about-img-small');
+        $('.contact-title').addClass('rotated');
+        $('.tiles').removeClass('hide');
+        animatedLightContainer.animate({
             height: "100%"
         }, 300);
+    };
+
+    if (window.location.hash === "#peter-white") {
+        openPeterWhite();
+    }
+    if (window.location.hash === "#matt-bianco") {
+        openMattBianco();
+    }
+    if (window.location.hash === "#about") {
+        openAbout();
+    }
+    if (window.location.hash === "#artists") {
+        openArtists();
+    }
+    if (window.location.hash === "#tickets") {
+        openTickets();
+    }
+    if (window.location.hash === "#events") {
+        openEvents();
+    }
+
+    if (window.location.hash === "#partners") {
+        openPartners();
+    }
+
+    if (window.location.hash === "#contact") {
+        openContact();
+    }
+
+    $(window).on('hashchange', function () {
+        if (window.location.hash === "#peter-white") {
+            openPeterWhite();
+        }
+        if (window.location.hash === "#matt-bianco") {
+            openMattBianco();
+        }
+        if (window.location.hash === "#about") {
+            openAbout();
+        }
+        if (window.location.hash === "#artists") {
+            openArtists();
+        }
+        if (window.location.hash === "#tickets") {
+            openTickets();
+        }
+        if (window.location.hash === "#events") {
+            openEvents();
+        }
+
+        if (window.location.hash === "#partners") {
+            openPartners();
+        }
+
+        if (window.location.hash === "#contact") {
+            openContact();
+        }
+
+        if (window.location.hash === "") {
+            tilesView();
+        }
     });
 
+    $(document).on("click", '.close', function () {
+        tilesView();
+    });
 
-    $('.contact').mouseenter(function(){
-        $('.contact-img').animate({
+    $(document).on("click", '.animatedLogoXY', function () {
+        window.location.href = "";
+    });
+
+    $('.contact').mouseenter(function () {
+        var contactImage = $('.contact-img');
+        contactImage.animate({
             marginTop: "-50px",
             opacity: "0"
-        }, 200)
-
-        $('.contact-img').animate({
+        }, 200).animate({
             marginTop: "80px"
-        },50)
-
-        $('.contact-img').animate({
+        }, 50).animate({
             marginTop: "30px",
             opacity: "1"
         }, 200)
     });
 
-    // $('.partners, .about, .artists, .tickets, .events').mouseenter(function() {
-    //     $(this).find('h1, h2').textillate({ in: { effect: 'flip',  shuffle: true, delay: 100   } }).textillate('start');
-    //
-    // });
-    //
-    // $('.about').mouseenter(function() {
-    //     $('.about-heading').textillate({ in: { effect: 'flip',  shuffle: true, delay: 100   } }).textillate('start');
-    //
-    // });
-
-
-
-
-
-    $('.peter-wrapper, .reilly-wrapper').mouseenter(function(){
-        $(this).find(':nth-child(2)').animate({
-            height: "20%"}, 400)
+    $('.big').mouseenter(function () {
+        $(this).find('h2, h1').textillate({in: {effect: 'flip', shuffle: true, delay: 100}}).textillate('start');
     });
-    $('.peter-wrapper, .reilly-wrapper').mouseleave(function(){
+    //---------------------------------------------------------------ARTISTS TILE---------------------------------------------
+    $('.peter-wrapper, .reilly-wrapper').mouseenter(function () {
+        $(this).find(':nth-child(2)').find('img').show();
         $(this).find(':nth-child(2)').animate({
-            height: "0"}, 400)
+            height: "22%"
+        }, 400)
+    });
+    $('.peter-wrapper, .reilly-wrapper').mouseleave(function () {
+        $(this).find(':nth-child(2)').find('img').hide();
+        $(this).find(':nth-child(2)').animate({
+            height: "0"
+        }, 400)
     });
 
-    $('.peterArrow, .reillyArrow').click(function(){
-            $(this).parent().find('p').toggleClass('hide');
-            $(this).toggleClass('reverted');
-        });
+    $('.peter-wrapper, .reilly-wrapper').click(function (event) {
+        $(this).parent().find('.description>p').fadeIn(700).toggleClass('hide');
+        $(this).find('.arrow-wrapper').toggleClass('reverted');
 
+        var target = $(event.target);
 
+        $('html, body').animate({
+            scrollTop: target.parent().offset().top
+        }, 300);
 
-    // jQuery(document).ready(function($) {
-    //
-    //     if (window.history && window.history.pushState) {
-    //
-    //         $(window).on('popstate', function() {
-    //             var hashLocation = location.hash;
-    //             var hashSplit = hashLocation.split("#!/");
-    //             var hashName = hashSplit[1];
-    //
-    //             if (hashName !== '') {
-    //                 var hash = window.location.hash;
-    //                 if (hash === '') {
-    //                     alert('Back button was pressed.');
-    //                 }
-    //             }
-    //         });
-    //
-    //         window.history.pushState('forward', null, '#');
-    //     }
-    //
-    // });
+        animatedLightContainer.animate({
+            height: 280 + $('#artists-content').height()
+        }, 300);
 
+    });
 
 });
