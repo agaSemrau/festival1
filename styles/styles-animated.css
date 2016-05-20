@@ -71,7 +71,7 @@
 
 .text {
     margin-left: 7%;
-    font-family: Raleway-Light, sans-serif;
+    font-family: Raleway-Medium, sans-serif;
 }
 
 .text > li {
@@ -122,6 +122,9 @@
     -webkit-transition: .4s ease-in;
     -o-transition: .4s ease-in;
     border: solid 1px black;
+
+    background-position: 50% 50%;
+    color: black;
 }
 
 .about:hover, .artists:hover, .partners:hover, .contact:hover, .events:hover, .tickets:hover {
@@ -164,7 +167,7 @@ hr {
 }
 
 .big p {
-    font-family: Raleway-Light, sans-serif;
+    font-family: Raleway-Medium, sans-serif;
     line-height: 19px;
     font-size: 13px;
     margin-left: 7%;
@@ -209,7 +212,7 @@ hr {
     color: white;
     height: 80px;
     background-color: black;
-    font-family: Raleway-Light, sans-serif;
+    font-family: Raleway-Medium, sans-serif;
     font-size: 20px;
     text-align: center;
     padding-top: 25px;
@@ -228,15 +231,40 @@ hr {
     width: 621px;
     left: 354px;
     top: 10px;
-    color: black;
-    background-image: url('../images/reilly2.jpg');
-    background-size: cover;
-    background-position: 50% 50%;
+    position:relative;
 }
 
-.artists:hover {
-    background-image: url('../images/reilly1.jpg');
-    transform: scale(0.97);
+.artists:before{
+    background:rgba(255,255,255,.3) url('../images/reilly1.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: inherit;
+    content:'';
+    z-index:1;
+    opacity:0.5;
+    transition: .4s ease-in;
+    -moz-transition: .4s ease-in;
+    -webkit-transition: .4s ease-in;
+    -o-transition: .4s ease-in;
+}
+
+.artists:after{
+    position:absolute;
+    top:0; left:0;
+    content:'';
+    z-index:1;
+    opacity:0;
+    transition: .4s ease-in;
+    -moz-transition: .4s ease-in;
+    -webkit-transition: .4s ease-in;
+    -o-transition: .4s ease-in;
+}
+.artists:hover:before{
+    opacity:0.8;
+}
+.artists:hover:after{
+    opacity:0.3;
 }
 
 .artists h2 {
@@ -244,13 +272,17 @@ hr {
     margin-top: 20px;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 90px;
+    z-index:2;
+    position: relative;
 }
 
 .artists > h3 {
     text-align: center;
     margin-top: 10px;
-    font-family: Raleway-Light, sans-serif;
+    font-family: Raleway-Medium, sans-serif;
     font-size: 20px;
+    z-index:2;
+    position: relative;
 }
 
 .artists-img {
@@ -282,21 +314,44 @@ hr {
 .artists-img:hover {
     cursor: pointer;
 }
-
 .tickets {
-    background-image: url('../images/shore2.jpg');
-    background-position: 50% 50%;
-    background-size: cover;
     height: 216px;
     width: 335px;
     left: 354px;
-    top: 215px;
-    color: black;
+    top: 20px;
+    position:relative;
 }
+.tickets:before{
+    background:rgba(255,255,255,.5) url('../images/shore3.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: inherit;
+    content:'';
+    z-index:1;
+    opacity:0.5;
+    transition: .4s ease-in;
+    -moz-transition: .4s ease-in;
+    -webkit-transition: .4s ease-in;
+    -o-transition: .4s ease-in;
+}
+.tickets:after{
+    position:absolute;
+    top:0; left:0;
+    content:'';
+    z-index:1;
+    opacity:0;
+    transition: .4s ease-in;
+    -moz-transition: .4s ease-in;
+    -webkit-transition: .4s ease-in;
+    -o-transition: .4s ease-in;
+}
+.tickets:hover:before{
+    opacity:1;
 
-.tickets:hover {
-    background-image: url('../images/shore3.jpg');
-    transform: scale(0.97);
+}
+.tickets:hover:after{
+    opacity:0.5;
 }
 
 .tickets > h2, .events > h2 {
@@ -304,18 +359,24 @@ hr {
     margin-top: 20px;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 120px;
+    z-index: 2;
+    position:relative;
 }
 
 .tickets > h3, .events > h3 {
     text-align: center;
     margin-top: 10px;
-    font-family: Raleway-Light, sans-serif;
+    font-family: Raleway-Medium, sans-serif;
     font-size: 20px;
+    z-index: 2;
+    position:relative;
 }
 
 .events > h2 {
     margin-top: 130px;
     font-size: 90px;
+    z-index: 2;
+    position:relative;
 }
 
 .events {
@@ -325,9 +386,6 @@ hr {
     top: 215px;
     bottom: 30px;
     background-image: url('../images/peterw.jpg');
-    background-position: 50% 50%;
-    background-size: cover;
-    color: black;
 }
 
 .events:hover {
@@ -343,8 +401,6 @@ hr {
 
 .contact {
     background-image: url('../images/contact2.jpg');
-    background-position: 50% 50%;
-    background-size: cover;
     height: 216px;
     width: 335px;
     left: 354px;
@@ -386,9 +442,6 @@ hr {
     font-family: Mathlete Bulky, sans-serif;
     font-size: 60px;
     background-image: url('../images/piano3.jpg');
-    background-position: 50% 50%;
-    background-size: cover;
-    color: black;
 }
 
 .partners:hover {
@@ -401,13 +454,17 @@ hr {
     margin-top: 20px;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 120px;
+    z-index: 2;
+    position:relative;
 }
 
 .partners > h3 {
     text-align: center;
     margin-top: 10px;
-    font-family: Raleway-Light, sans-serif;
+    font-family: Raleway-Medium, sans-serif;
     font-size: 20px;
+    z-index: 2;
+    position:relative;
 }
 
 .close {

@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords"
           content="Jazz, Jazz Festival, Festiwal Jazzowy, Gdynia Jazz Days, Gdynia Jazz by the sea, Jazz by the sea, Jazz by the sea Weekend, Gdynia Jazz Weekend">
-    <meta name="description" content="Gdynia Jazz by the sea weekend, festiwal jazzowy w Gdyni">
+    <meta name="description" content="Gdynia Smooth Jazz by the sea weekend, najlepszy festiwal jazzowy w Gdyni. Jazz By The Sea Weekend to święto muzyki jazzowej w Trójmieście.
+    Pierwsza edycja festiwalu odbędzie się między 17 września a 1 października 2016.">
     <link rel="stylesheet" href="styles/styles-animated.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/animate.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="shortcut icon" href="images/white_logo2.png" type="image/x-icon"/>
     <link href="http://pl.allfont.net/allfont.css?fonts=mathlete-bulky" rel="stylesheet" type="text/css"/>
@@ -17,23 +18,6 @@
 </head>
 <body>
 
-<script>
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: '863037597137965',
-            xfbml: true,
-            version: 'v2.6'
-        });
-    };
-
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.6";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
 
 <main>
     <div class="animatedDark">
@@ -73,18 +57,17 @@
                     <hr>
                     <br>
                     <p>Jesteśmy w trakcie jego ustalania, ale możemy podać dwie najważniejsze informacje:</p>
-                    <p>30 września w hali Gdynia Arena usłyszeć będzie można <a class="link"
-                                                                                href="javascript:location.hash='#matt-bianco'; CurHash('#matt-bianco');">MATT
-                        BIANCO (MARK REILLY) MEETS NEW COOL COLLECTIVE </a></p>
-                    <p>1 października w hali Gdynia Arena zagra <a class="link"
-                                                                   href="javascript:location.hash='#peter-white'; CurHash('#peter-white');">PETER
-                        WHITE z zespołem </a></p>
+                    <p>30 września w hali Gdynia Arena usłyszeć będzie można <a class="link" href="javascript:location.hash='#matt-bianco'; CurHash('#matt-bianco');">
+                        MATT BIANCO (MARK REILLY) MEETS NEW COOL COLLECTIVE </a></p>
+                    <p>1 października w hali Gdynia Arena zagra <a class="link" href="javascript:location.hash='#peter-white'; CurHash('#peter-white');">
+                        PETER WHITE z zespołem </a></p>
                     <br>
                     <p>Więcej szczegółów wkrótce!</p>
                 </div>
             </div>
 
             <a href="javascript:location.hash='#artists'; CurHash('#artists');">
+
                 <div class="artists tiles" id="artists">
                     <h2 class="artists-head">Wykonawcy</h2>
                     <h3>Sprawdź kto nas odwiedzi w tym roku</h3>
@@ -103,12 +86,14 @@
                     <h3>Peter White</h3>
                     <div class="entire-peter-wrapper">
                         <div class="peter-wrapper" id="peter-white">
-                            <img class="artists-img peter" src="images/pwhite-big.jpg"/>
+                            <img class="artists-img peter" src="images/pwhite-big.jpg" alt="Peter White"/>
+
                             <div class="arrow-wrapper">
                                 <img class="arrow peterArrow" src="images/smallArrowDown.png"/>
                             </div>
                         </div>
                         <div class="description">
+                            <br>
                             <p class="hide"> Peter White to postać nietuzinkowa w świecie jazzu. Można zaliczyć
                                 go do grona głównych reprezentantów nurtów smooth
                                 i fusion, w których tworzy nieprzerwanie od prawie 40 lat. Popularność zdobył jako
@@ -171,12 +156,14 @@
                     <h3>New Cool Colective & Mark Reilly/Matt Bianco</h3>
                     <div class="entire-reilly-wrapper">
                         <div class="reilly-wrapper" id="matt-bianco">
-                            <img class="artists-img" src="images/mark_reilly.png"/>
+                            <img class="artists-img" src="images/mark_reilly.png" alt="New Cool Colective & Mark Reilly, Matt Bianco"/>
+
                             <div class="arrow-wrapper">
                                 <img class="arrow reillyArrow" src="images/smallArrowDown.png"/>
                             </div>
                         </div>
                         <div class="description">
+                            <br>
                             <p class="hide">Muzyczne kolaboracje artystów z pogranicza muzyki jazzowej dają
                                 zwykle oszałamiające efekty.
                                 Matt Bianco powstał na początku lat osiemdziesiątych jako efekt współpracy członków
@@ -379,6 +366,7 @@
 <footer class="animatedFooter">
     <p>    &#9400; 2016, Jazz by the Sea Weekend</p>
 </footer>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="js/jquery.lettering-0.6.1.min.js"></script>

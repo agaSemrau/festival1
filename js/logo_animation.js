@@ -3,6 +3,7 @@ function CurHash(option) {
 }
 
 $('document').ready(function () {
+
     //-------------------------------------------------FIRST logo ANIMATION-------------------------------------------
     var animatedLogo = $('.animatedLogo'),
             animatedLightContainer = $('.animatedLightContainer'),
@@ -158,15 +159,30 @@ $('document').ready(function () {
         $('#artists-content').fadeIn(600).removeClass('hide');
         $('#about-content').addClass('hide');
         $('.tiles').addClass('hide');
+        $('.entire-peter-wrapper').find('.description>p').fadeIn(700).toggleClass('hide');
+        $('.entire-peter-wrapper').find('.arrow-wrapper').toggleClass('reverted');
+
+        $('html, body').animate({
+            scrollTop: $('.entire-peter-wrapper').offset().top
+        }, 300);
+
         animatedLightContainer.animate({
             height: 280 + $('#artists-content').height()
         }, 300);
     };
     var openMattBianco = function () {
+        var reilly= $('.entire-reilly-wrapper')
         $('.img-about').removeClass('about-img-small');
         $('#artists-content').fadeIn(600).removeClass('hide');
         $('#about-content').addClass('hide');
         $('.tiles').addClass('hide');
+        reilly.find('.description>p').fadeIn(700).toggleClass('hide');
+        reilly.find('.arrow-wrapper').toggleClass('reverted');
+
+        $('html, body').animate({
+            scrollTop: reilly.offset().top
+        }, 300);
+
         animatedLightContainer.animate({
             height: 280 + $('#artists-content').height()
         }, 300);
@@ -344,5 +360,24 @@ $('document').ready(function () {
         }, 300);
 
     });
+
+
+    //------------------------------------------------FACEBOOK-------------------------------------------------------
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '863037597137965',
+            xfbml: true,
+            version: 'v2.6'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.6";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 
 });
