@@ -4,12 +4,16 @@
     src: url("fonts/Mathlete-Bulky.ttf")format('truetype');
 }
 @font-face {
-    font-family: Raleway-Medium;
-    src: url("fonts/Raleway-Medium.ttf") format('truetype');
+    font-family: Raleway-SemiBold;
+    src: url("fonts/Raleway-SemiBold.ttf") format('truetype');
 }
 @font-face {
     font-family: Raleway-Light;
     src: url("fonts/Raleway-Light.ttf") format('truetype');
+}
+@font-face {
+    font-family: Raleway-Regular;
+    src: url("fonts/Raleway-Regular.ttf") format('truetype');
 }
 body {
     margin:0;
@@ -98,7 +102,6 @@ a:hover, a:focus {
 .logoAnimatedSmall:hover{
     cursor:pointer;
 }
-
 /*----------------------------KONTENER Z KAFELKAMI I KAFELKI------------------------------*/
 .lightContainer {
     height: 0;
@@ -108,7 +111,6 @@ a:hover, a:focus {
 }
 .tilesContainer {
     margin:auto;
-    margin-bottom: 70px;
     height: 660px;
     width: 996px;
     position:relative;
@@ -127,7 +129,7 @@ a:hover, a:focus {
         top: 240px;
         left: 153px;
     }
-	
+
     .blue_wave{
         top: 280px;
         left: 153px;
@@ -159,7 +161,7 @@ a:hover, a:focus {
         height:auto;
         width: 100%;
     }
-	
+
     .animatedDate{
         left: auto !important;
         margin-left: auto;

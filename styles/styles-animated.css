@@ -64,14 +64,18 @@
     padding-top: 0;
 }
 
+a {
+    position:relative;
+}
+
 /*----------------------------KONTENER Z KAFELKAMI I KAFELKI------------------------------*/
 .bold {
-    font-weight: bold;
+    font-family: Raleway-SemiBold, sans-serif;
 }
 
 .text {
     margin-left: 7%;
-    font-family: Raleway-Medium, sans-serif;
+    font-family: Raleway-Regular, sans-serif;
 }
 
 .text > li {
@@ -99,7 +103,7 @@
 }
 
 .link:hover {
-    font-weight: bold;
+    font-weight: 600;
     color: #f47222 !important;
 }
 
@@ -107,7 +111,7 @@
     display: block;
     height: 100%;
     background-color: rgb(244, 244, 244);
-    padding-top: 4.4%;
+    padding-top: 4.5%;
     padding-bottom: 4.5%;
 }
 
@@ -126,16 +130,13 @@
     background-position: 50% 50%;
     color: black;
 }
-
 .about:hover, .artists:hover, .partners:hover, .contact:hover, .events:hover, .tickets:hover {
     cursor: pointer;
     transform: scale(0.97);
 }
-
 hr {
     width: 85%;
 }
-
 .big {
     margin: auto;
     top: 10px;
@@ -153,58 +154,49 @@ hr {
     margin-bottom: 130px;
     color: black;
 }
-
 .big > h1, .big > h2 {
     font-family: Mathlete Bulky, sans-serif;
     font-size: 80px;
     margin-left: 7%;
 }
-
 .big h3 {
     font-family: Raleway-Light, sans-serif;
     font-size: 18px;
     margin-left: 7%;
 }
-
 .big p {
-    font-family: Raleway-Medium, sans-serif;
+    font-family: Raleway-Regular, sans-serif;
     line-height: 19px;
     font-size: 13px;
     margin-left: 7%;
     margin-right: 7%;
     text-align: justify;
 }
-
 .about-img-small {
     position: absolute;
     top: 40px;
     left: 760px;
     height: 140px !important;
 }
-
 .about {
     height: 420px;
     width: 344px;
     top: 10px;
 }
-
 .about:hover {
     transform: scale(0.97);
 }
-
 .text-about {
     margin-top: 10px;
     margin-left: 7%;
-    width: 100%;
+    width: 60%;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 60px;
     display: inline-block;
 }
-
 .img-about {
     height: 340px;
 }
-
 .about-nav {
     width: 100%;
     position: absolute;
@@ -212,28 +204,28 @@ hr {
     color: white;
     height: 80px;
     background-color: black;
-    font-family: Raleway-Medium, sans-serif;
+    font-family: Raleway-Regular, sans-serif;
     font-size: 20px;
     text-align: center;
     padding-top: 25px;
 }
-
 .about-text {
-    font-family: Raleway-Medium, sans-serif;
+    font-family: Raleway-Regular, sans-serif;
 }
-
 .reverted {
     transform: perspective(400px) rotateX(180deg);
 }
-
-.artists {
+.artists-link {
     height: 195px;
     width: 621px;
     left: 354px;
     top: 10px;
     position:relative;
 }
-
+.artists{
+    height: 195px;
+    width: 621px;
+}
 .artists:before{
     background:rgba(255,255,255,.3) url('../images/reilly1.jpg');
     background-size: cover;
@@ -248,7 +240,6 @@ hr {
     -webkit-transition: .4s ease-in;
     -o-transition: .4s ease-in;
 }
-
 .artists:after{
     position:absolute;
     top:0; left:0;
@@ -266,7 +257,6 @@ hr {
 .artists:hover:after{
     opacity:0.3;
 }
-
 .artists h2 {
     text-align: center;
     margin-top: 20px;
@@ -275,32 +265,27 @@ hr {
     z-index:2;
     position: relative;
 }
-
 .artists > h3 {
     text-align: center;
     margin-top: 10px;
-    font-family: Raleway-Medium, sans-serif;
+    font-family: Raleway-Regular, sans-serif;
     font-size: 20px;
     z-index:2;
     position: relative;
 }
-
 .artists-img {
     margin-left: 7%;
     padding: 10px 0 10px;
     width: 86%;
 }
-
 .reilly-wrapper, .peter-wrapper {
     position: relative;
 }
-
 .peterArrow, .reillyArrow {
     position: absolute;
     left: 50%;
     margin-left: -30px;
 }
-
 .arrow-wrapper {
     height: 0;
     background-color: rgba(0, 0, 0, 0.7);
@@ -310,16 +295,19 @@ hr {
     margin-left: 7%;
     cursor: pointer;
 }
-
 .artists-img:hover {
     cursor: pointer;
 }
-.tickets {
+.tickets-link {
     height: 216px;
     width: 335px;
     left: 354px;
-    top: 20px;
+    top: 216px;
     position:relative;
+}
+.tickets{
+    height: 216px;
+    width: 335px;
 }
 .tickets:before{
     background:rgba(255,255,255,.5) url('../images/shore3.jpg');
@@ -348,12 +336,10 @@ hr {
 }
 .tickets:hover:before{
     opacity:1;
-
 }
 .tickets:hover:after{
     opacity:0.5;
 }
-
 .tickets > h2, .events > h2 {
     text-align: center;
     margin-top: 20px;
@@ -362,63 +348,117 @@ hr {
     z-index: 2;
     position:relative;
 }
-
 .tickets > h3, .events > h3 {
     text-align: center;
     margin-top: 10px;
-    font-family: Raleway-Medium, sans-serif;
+    font-family: Raleway-Regular, sans-serif;
     font-size: 20px;
     z-index: 2;
     position:relative;
 }
-
 .events > h2 {
     margin-top: 130px;
     font-size: 90px;
     z-index: 2;
     position:relative;
 }
-
-.events {
+.events-link {
     height: 444px;
     width: 277px;
     left: 699px;
     top: 215px;
-    bottom: 30px;
-    background-image: url('../images/peterw.jpg');
+    position:relative;
 }
-
-.events:hover {
-    background-image: url('../images/peter1.jpg');
-    transform: scale(0.97);
+.events{
+    height: 444px;
+    width: 277px;
 }
-
-.contact-img {
-    margin-top: 30px;
-    margin-left: 115px;
-    width: 170px;
+.events:before{
+    background:rgba(255,255,255,.5) url('../images/peter1.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: inherit;
+    content:'';
+    z-index:1;
+    opacity:0.5;
+    transition: .4s ease-in;
+    -moz-transition: .4s ease-in;
+    -webkit-transition: .4s ease-in;
+    -o-transition: .4s ease-in;
 }
-
-.contact {
-    background-image: url('../images/contact2.jpg');
+.events:after{
+    position:absolute;
+    top:0; left:0;
+    content:'';
+    z-index:1;
+    opacity:0;
+    transition: .4s ease-in;
+    -moz-transition: .4s ease-in;
+    -webkit-transition: .4s ease-in;
+    -o-transition: .4s ease-in;
+}
+.events:hover:before{
+    opacity:1;
+}
+.events:hover:after{
+    opacity:0.5;
+}
+.contact-link {
     height: 216px;
     width: 335px;
     left: 354px;
     top: 441px;
-    bottom: 30px;
+    position: relative;
 }
-
-.contact:hover {
-    background-image: url('../images/contact1.jpg');
-    transform: scale(0.97);
+.contact {
+    height: 216px;
+    width: 335px;
 }
-
+.contact:before{
+    background:rgba(255,255,255,.5) url('../images/contact1.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: inherit;
+    content:'';
+    z-index:1;
+    opacity:0.5;
+    transition: .4s ease-in;
+    -moz-transition: .4s ease-in;
+    -webkit-transition: .4s ease-in;
+    -o-transition: .4s ease-in;
+}
+.contact:after{
+    position:absolute;
+    top:0; left:0;
+    content:'';
+    z-index:1;
+    opacity:0;
+    transition: .4s ease-in;
+    -moz-transition: .4s ease-in;
+    -webkit-transition: .4s ease-in;
+    -o-transition: .4s ease-in;
+}
+.contact:hover:before{
+    opacity:1;
+}
+.contact:hover:after{
+    opacity:0.5;
+}
 .contact-title {
     margin-top: 20px;
     font-family: Mathlete Bulky, sans-serif;
     font-size: 120px;
+    z-index: 2;
 }
-
+.contact-img {
+    margin-top: 60px;
+    margin-left: 115px;
+    width: 170px;
+    z-index: 2;
+    position:relative;
+}
 .rotated {
     margin-top: 80px;
     -webkit-transform: rotate(-90deg);
@@ -433,20 +473,46 @@ hr {
     font-family: Mathlete Bulky, sans-serif;
     font-size: 60px;
 }
-
-.partners {
+.partners-link {
     height: 216px;
     width: 345px;
     top: 441px;
-    bottom: 30px;
-    font-family: Mathlete Bulky, sans-serif;
-    font-size: 60px;
-    background-image: url('../images/piano3.jpg');
+    position:relative
 }
-
-.partners:hover {
-    background-image: url('../images/piano4.jpg');
-    transform: scale(0.97);
+.partners {
+    height: 216px;
+    width: 345px;
+}
+.partners:before{
+    background:rgba(255,255,255,.5) url('../images/piano4.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: inherit;
+    content:'';
+    z-index:1;
+    opacity:0.5;
+    transition: .4s ease-in;
+    -moz-transition: .4s ease-in;
+    -webkit-transition: .4s ease-in;
+    -o-transition: .4s ease-in;
+}
+.partners:after{
+    position:absolute;
+    top:0; left:0;
+    content:'';
+    z-index:1;
+    opacity:0;
+    transition: .4s ease-in;
+    -moz-transition: .4s ease-in;
+    -webkit-transition: .4s ease-in;
+    -o-transition: .4s ease-in;
+}
+.partners:hover:before{
+    opacity:1;
+}
+.partners:hover:after{
+    opacity:0.5;
 }
 
 .partners > h2 {
@@ -461,7 +527,7 @@ hr {
 .partners > h3 {
     text-align: center;
     margin-top: 10px;
-    font-family: Raleway-Medium, sans-serif;
+    font-family: Raleway-Regular, sans-serif;
     font-size: 20px;
     z-index: 2;
     position:relative;
@@ -469,8 +535,8 @@ hr {
 
 .close {
     position: absolute;
-    top: 20px;
-    left: 935px;
+    top: 0;
+    left: 925px;
     font-size: 16px;
     opacity: 0.7 !important;
     z-index: 999;
@@ -509,21 +575,44 @@ iframe {
     margin-top: -56px;
 }
 
+.autoplay img {
+    height: 40px;
+    margin: 5px 15px;
+}
+.second img {
+    height: 80px;
+}
+.footer-div {
+    float: left;
+    width: 330px;
+}
+
 .footer {
     height: 0;
     background-color: rgb(255, 255, 255);
     text-align: center;
     padding-top: 20px;
-    font-family: Raleway-Medium, sans-serif;
+    font-family: Raleway-Regular, sans-serif;
 }
 
+.clear {
+    display: block;
+    height: 0;
+    clear:both;
+}
+.footer-wrapper {
+    width: 996px;
+    margin: auto;
+    margin-bottom: 20px;
+}
 .animatedFooter {
-    height: 80px;
+    height: 100px;
     background-color: rgb(255, 255, 255);
     text-align: center;
     padding-top: 20px;
-    font-family: Raleway-Medium, sans-serif;
+    font-family: Raleway-Regular, sans-serif;
 }
+
 
 /*------------------------------Media queries--------------------------------------*/
 
@@ -548,21 +637,43 @@ iframe {
     }
 
     .tiles.about, .tiles.tickets, .contact.tiles, .artists.tiles, .partners.tiles, .events.tiles {
-        top: 0;
-        left: 0;
-        position: relative;
         width: 95vw;
         height: 200px;
+    }
+
+    .about-link, .artists-link, .tiles-link, .partners-link, .events-link, .contact-link, .tickets-link {
+        width: 95vw;
+        height: 200px;
+        left:10px;
         margin: 10px;
     }
 
+    .artists-link {
+        top: 200px;
+    }
+
+    .events-link{
+        top: 410px;
+    }
+
+    .tickets-link{
+        top: 620px;
+    }
+
+    .contact-link{
+        top: 830px;
+    }
+
+    .partners-link{
+        top: 1040px;
+    }
     .fb_page, .fb_iframe_widget_fluid, .fb_iframe_widget {
         display: none !important;
     }
 
     .lightContainer, .tilesContainer, .animatedLightContainer {
         min-height: 100%;
-        height: auto;
+        height: 1350px;
         width: 100%;
     }
 

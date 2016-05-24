@@ -167,7 +167,7 @@ $('document').ready(function () {
         }, 300);
 
         animatedLightContainer.animate({
-            height: 280 + $('#artists-content').height()
+            height: 220 + $('#artists-content').height()
         }, 300);
     };
     var openMattBianco = function () {
@@ -184,7 +184,7 @@ $('document').ready(function () {
         }, 300);
 
         animatedLightContainer.animate({
-            height: 280 + $('#artists-content').height()
+            height: 220 + $('#artists-content').height()
         }, 300);
     };
     var openAbout = function () {
@@ -193,35 +193,35 @@ $('document').ready(function () {
         $('.tiles').addClass('hide');
         $('.img-about').addClass('about-img-small');
         animatedLightContainer.animate({
-            height: 280 + $('#about-content').height()
+            height: 220 + $('#about-content').height()
         }, 300);
     };
     var openArtists = function () {
         $('#artists-content').fadeIn(600).removeClass('hide');
         $('.tiles').addClass('hide');
         animatedLightContainer.animate({
-            height: 280 + $('#artists-content').height()
+            height: 220 + $('#artists-content').height()
         }, 300);
     };
     var openTickets = function () {
         $('#tickets-content').fadeIn(600).removeClass('hide');
         $('.tiles').addClass('hide');
         animatedLightContainer.animate({
-            height: 280 + $('#tickets-content').height()
+            height: 220 + $('#tickets-content').height()
         }, 300);
     };
     var openEvents = function () {
         $('#events-content').fadeIn(600).removeClass('hide');
         $('.tiles').addClass('hide');
         animatedLightContainer.animate({
-            height: 280 + $('#events-content').height()
+            height: 220 + $('#events-content').height()
         }, 300);
     };
     var openPartners = function () {
         $('#partners-content').fadeIn(600).removeClass('hide');
         $('.tiles').addClass('hide');
         animatedLightContainer.animate({
-            height: 280 + $('#partners-content').height()
+            height: 220 + $('#partners-content').height()
         }, 300);
     };
     var openContact = function () {
@@ -229,7 +229,7 @@ $('document').ready(function () {
         $('.contact-title').removeClass('rotated');
         $('.tiles').addClass('hide');
         animatedLightContainer.animate({
-            height: 280 + $('#contact-content').height()
+            height: 220 + $('#contact-content').height()
         }, 300);
     };
     var tilesView = function () {
@@ -242,9 +242,15 @@ $('document').ready(function () {
         $('.img-about').removeClass('about-img-small');
         $('.contact-title').addClass('rotated');
         $('.tiles').removeClass('hide');
-        animatedLightContainer.animate({
+        if (window.innerWidth<1050){
+            animatedLightContainer.animate({
+                height: "1350px"
+            }, 300);
+        }
+        else {  animatedLightContainer.animate({
             height: "100%"
-        }, 300);
+        }, 300);}
+
     };
 
     if (window.location.hash === "#peter-white") {
@@ -265,15 +271,12 @@ $('document').ready(function () {
     if (window.location.hash === "#events") {
         openEvents();
     }
-
     if (window.location.hash === "#partners") {
         openPartners();
     }
-
     if (window.location.hash === "#contact") {
         openContact();
     }
-
     $(window).on('hashchange', function () {
         if (window.location.hash === "#peter-white") {
             openPeterWhite();
@@ -293,15 +296,12 @@ $('document').ready(function () {
         if (window.location.hash === "#events") {
             openEvents();
         }
-
         if (window.location.hash === "#partners") {
             openPartners();
         }
-
         if (window.location.hash === "#contact") {
             openContact();
         }
-
         if (window.location.hash === "") {
             tilesView();
         }
@@ -323,7 +323,7 @@ $('document').ready(function () {
         }, 200).animate({
             marginTop: "80px"
         }, 50).animate({
-            marginTop: "30px",
+            marginTop: "60px",
             opacity: "1"
         }, 200)
     });
@@ -356,7 +356,7 @@ $('document').ready(function () {
         }, 300);
 
         animatedLightContainer.animate({
-            height: 280 + $('#artists-content').height()
+            height: 220 + $('#artists-content').height()
         }, 300);
 
     });
@@ -379,5 +379,17 @@ $('document').ready(function () {
         js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.6";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+
+    $('.first, .third').slick({
+        lazyLoad: 'ondemand',
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        infinite: true,
+        speed: 300,
+        slidesToShow:1,
+        slidesToScroll:1,
+        variableWidth: true
+});
 
 });
