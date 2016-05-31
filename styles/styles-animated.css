@@ -70,7 +70,7 @@ a {
 
 /*----------------------------KONTENER Z KAFELKAMI I KAFELKI------------------------------*/
 .bold {
-    font-family: Raleway-SemiBold, sans-serif;
+    font-family: Raleway-SemiBold, sans-serif !important;
 }
 
 .text {
@@ -121,18 +121,19 @@ a {
 }
 
 .about, .artists, .partners, .contact, .events, .tickets {
-    transition: .4s ease-in;
-    -moz-transition: .4s ease-in;
-    -webkit-transition: .4s ease-in;
-    -o-transition: .4s ease-in;
+    /*transition: .4s ease-in;*/
+    /*-moz-transition: .4s ease-in;*/
+    /*-webkit-transition: .4s ease-in;*/
+    /*-o-transition: .4s ease-in;*/
     border: solid 1px black;
-
-    background-position: 50% 50%;
+    z-index: 1;
+    background-position: center;
     color: black;
+    position: relative;
 }
 .about:hover, .artists:hover, .partners:hover, .contact:hover, .events:hover, .tickets:hover {
     cursor: pointer;
-    transform: scale(0.97);
+
 }
 hr {
     width: 85%;
@@ -153,6 +154,7 @@ hr {
     cursor: default;
     margin-bottom: 130px;
     color: black;
+
 }
 .big > h1, .big > h2 {
     font-family: Mathlete Bulky, sans-serif;
@@ -183,9 +185,10 @@ hr {
     width: 344px;
     top: 10px;
 }
-.about:hover {
-    transform: scale(0.97);
+.about-link {
+    position:absolute;
 }
+
 .text-about {
     margin-top: 10px;
     margin-left: 7%;
@@ -195,7 +198,15 @@ hr {
     display: inline-block;
 }
 .img-about {
+    transform: scale(0.985);
     height: 340px;
+    transition: .3s ease-in;
+    -moz-transition: .3s ease-in;
+    -webkit-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
+}
+.img-about:hover {
+    transform: scale(1);
 }
 .about-nav {
     width: 100%;
@@ -220,7 +231,7 @@ hr {
     width: 621px;
     left: 354px;
     top: 10px;
-    position:relative;
+    position:absolute;
 }
 .artists{
     height: 195px;
@@ -228,7 +239,7 @@ hr {
 }
 .artists:before{
     background:rgba(255,255,255,.3) url('../images/reilly1.jpg');
-    background-size: cover;
+    background-size: contain;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     background-color: inherit;
@@ -246,16 +257,14 @@ hr {
     content:'';
     z-index:1;
     opacity:0;
-    transition: .4s ease-in;
-    -moz-transition: .4s ease-in;
-    -webkit-transition: .4s ease-in;
-    -o-transition: .4s ease-in;
+
 }
 .artists:hover:before{
     opacity:0.8;
 }
 .artists:hover:after{
     opacity:0.3;
+
 }
 .artists h2 {
     text-align: center;
@@ -303,7 +312,7 @@ hr {
     width: 335px;
     left: 354px;
     top: 216px;
-    position:relative;
+    position:absolute;
 }
 .tickets{
     height: 216px;
@@ -329,10 +338,7 @@ hr {
     content:'';
     z-index:1;
     opacity:0;
-    transition: .4s ease-in;
-    -moz-transition: .4s ease-in;
-    -webkit-transition: .4s ease-in;
-    -o-transition: .4s ease-in;
+
 }
 .tickets:hover:before{
     opacity:1;
@@ -367,7 +373,7 @@ hr {
     width: 277px;
     left: 699px;
     top: 215px;
-    position:relative;
+    position:absolute;
 }
 .events{
     height: 444px;
@@ -393,10 +399,7 @@ hr {
     content:'';
     z-index:1;
     opacity:0;
-    transition: .4s ease-in;
-    -moz-transition: .4s ease-in;
-    -webkit-transition: .4s ease-in;
-    -o-transition: .4s ease-in;
+
 }
 .events:hover:before{
     opacity:1;
@@ -409,7 +412,7 @@ hr {
     width: 335px;
     left: 354px;
     top: 441px;
-    position: relative;
+    position: absolute;
 }
 .contact {
     height: 216px;
@@ -435,10 +438,7 @@ hr {
     content:'';
     z-index:1;
     opacity:0;
-    transition: .4s ease-in;
-    -moz-transition: .4s ease-in;
-    -webkit-transition: .4s ease-in;
-    -o-transition: .4s ease-in;
+
 }
 .contact:hover:before{
     opacity:1;
@@ -477,7 +477,7 @@ hr {
     height: 216px;
     width: 345px;
     top: 441px;
-    position:relative
+    position:absolute;
 }
 .partners {
     height: 216px;
@@ -503,10 +503,7 @@ hr {
     content:'';
     z-index:1;
     opacity:0;
-    transition: .4s ease-in;
-    -moz-transition: .4s ease-in;
-    -webkit-transition: .4s ease-in;
-    -o-transition: .4s ease-in;
+
 }
 .partners:hover:before{
     opacity:1;
@@ -534,12 +531,12 @@ hr {
 }
 
 .close {
-    position: absolute;
     top: 0;
     left: 925px;
     font-size: 16px;
     opacity: 0.7 !important;
     z-index: 999;
+    position: realtive;
 }
 
 .close:hover {
@@ -556,6 +553,7 @@ hr {
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    z-index: 20;
 }
 
 .facebook-wrapper:hover {
@@ -569,6 +567,7 @@ hr {
     position: relative;
     top: 0;
     margin-left: -60px;
+    z-index:20;
 }
 
 iframe {
@@ -576,15 +575,21 @@ iframe {
 }
 
 .autoplay img {
-    height: 40px;
-    margin: 5px 15px;
+    height: 70px;
+    margin: 5px 0;
 }
 .second img {
     height: 80px;
 }
 .footer-div {
     float: left;
-    width: 330px;
+}
+
+.first, .third {
+    width: 300px;
+}
+.second {
+    width: 348px;
 }
 
 .footer {
@@ -637,35 +642,48 @@ iframe {
     }
 
     .tiles.about, .tiles.tickets, .contact.tiles, .artists.tiles, .partners.tiles, .events.tiles {
-        width: 95vw;
+        width: 93vw;
         height: 200px;
+        left:3px;
+    }
+    .footer-div {
+        float: none;
+    }
+
+    .footer, .footer-wrapper {
+        width: 95vw;
+    }
+    .first, .third, .second {
+        width: 60vw;
+        margin:auto;
+        margin-bottom: 20px;
     }
 
     .about-link, .artists-link, .tiles-link, .partners-link, .events-link, .contact-link, .tickets-link {
-        width: 95vw;
+        width: 93vw;
         height: 200px;
-        left:10px;
-        margin: 10px;
+        left:3px;
+        margin: 10px 0 10px;
     }
 
     .artists-link {
-        top: 200px;
+        top: 220px;
     }
 
     .events-link{
-        top: 410px;
+        top: 430px;
     }
 
     .tickets-link{
-        top: 620px;
+        top: 640px;
     }
 
     .contact-link{
-        top: 830px;
+        top: 850px;
     }
 
     .partners-link{
-        top: 1040px;
+        top: 1060px;
     }
     .fb_page, .fb_iframe_widget_fluid, .fb_iframe_widget {
         display: none !important;
@@ -736,6 +754,7 @@ iframe {
         margin-right: 5px;
         top: 0;
         left: 0;
+        z-index: 50;
     }
 
     .veryAnimatedDate {

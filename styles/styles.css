@@ -77,22 +77,35 @@ a:hover, a:focus {
 .mainDate, .animatedDate {
     color: white;
     font-family: Mathlete Bulky, sans-serif;
-    font-size: 45px;
-    margin-left: 50%;
+    font-size: 20px;
+    margin-left: 65%;
     position: absolute;
-    left: -170px;
+    /*left: -170px;*/
     letter-spacing: 3px;
-    margin-top: 0;
+    margin-top: -270px;
 }
 
 .contact-data {
     margin-left: 50%;
-    left: -350px;
+    left: -120px;
     position:absolute;
-    bottom: 4%;
+    bottom: 10%;
     font-family: Raleway-Light, sans-serif;
+    font-size: 30px;
     color: white;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+}
+.contact-data:hover {
+    cursor: pointer;
+    color: #fd6511;
+}
+
+.rotate {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
 .menu-wrapper {
     width: 1000px;
@@ -139,7 +152,7 @@ a:hover, a:focus {
         left: 153px;
     }
     .mainDate {
-        font-size: 53px;
+        font-size: 49px;
         left: -190px;
     }
 }
@@ -160,6 +173,10 @@ a:hover, a:focus {
         min-height: 100%;
         height:auto;
         width: 100%;
+    }
+
+    .tilesContainer {
+        height:1350px;
     }
 
     .animatedDate{

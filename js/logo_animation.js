@@ -159,6 +159,7 @@ $('document').ready(function () {
         $('#artists-content').fadeIn(600).removeClass('hide');
         $('#about-content').addClass('hide');
         $('.tiles').addClass('hide');
+        $('.links').addClass('hide');
         $('.entire-peter-wrapper').find('.description>p').fadeIn(700).toggleClass('hide');
         $('.entire-peter-wrapper').find('.arrow-wrapper').toggleClass('reverted');
 
@@ -176,6 +177,7 @@ $('document').ready(function () {
         $('#artists-content').fadeIn(600).removeClass('hide');
         $('#about-content').addClass('hide');
         $('.tiles').addClass('hide');
+        $('.links').addClass('hide');
         reilly.find('.description>p').fadeIn(700).toggleClass('hide');
         reilly.find('.arrow-wrapper').toggleClass('reverted');
 
@@ -191,6 +193,7 @@ $('document').ready(function () {
         $('#artists-content').addClass('hide');
         $('#about-content').fadeIn(600).removeClass('hide');
         $('.tiles').addClass('hide');
+        $('.links').addClass('hide');
         $('.img-about').addClass('about-img-small');
         animatedLightContainer.animate({
             height: 220 + $('#about-content').height()
@@ -199,6 +202,7 @@ $('document').ready(function () {
     var openArtists = function () {
         $('#artists-content').fadeIn(600).removeClass('hide');
         $('.tiles').addClass('hide');
+        $('.links').addClass('hide');
         animatedLightContainer.animate({
             height: 220 + $('#artists-content').height()
         }, 300);
@@ -206,6 +210,7 @@ $('document').ready(function () {
     var openTickets = function () {
         $('#tickets-content').fadeIn(600).removeClass('hide');
         $('.tiles').addClass('hide');
+        $('.links').addClass('hide');
         animatedLightContainer.animate({
             height: 220 + $('#tickets-content').height()
         }, 300);
@@ -213,6 +218,7 @@ $('document').ready(function () {
     var openEvents = function () {
         $('#events-content').fadeIn(600).removeClass('hide');
         $('.tiles').addClass('hide');
+        $('.links').addClass('hide');
         animatedLightContainer.animate({
             height: 220 + $('#events-content').height()
         }, 300);
@@ -220,6 +226,7 @@ $('document').ready(function () {
     var openPartners = function () {
         $('#partners-content').fadeIn(600).removeClass('hide');
         $('.tiles').addClass('hide');
+        $('.links').addClass('hide');
         animatedLightContainer.animate({
             height: 220 + $('#partners-content').height()
         }, 300);
@@ -228,28 +235,30 @@ $('document').ready(function () {
         $('#contact-content').fadeIn(600).removeClass('hide');
         $('.contact-title').removeClass('rotated');
         $('.tiles').addClass('hide');
+        $('.links').addClass('hide');
         animatedLightContainer.animate({
             height: 220 + $('#contact-content').height()
         }, 300);
     };
     var tilesView = function () {
-        $('#tickets-content').fadeOut(300).addClass('hide')
-        $('#artists-content').fadeOut(300).addClass('hide')
-        $('#about-content').fadeOut(300).addClass('hide')
-        $('#partners-content').fadeOut(300).addClass('hide')
-        $('#contact-content').fadeOut(300).addClass('hide')
-        $('#events-content').fadeOut(300).addClass('hide')
+        $('#tickets-content').fadeOut(300).addClass('hide');
+        $('#artists-content').fadeOut(300).addClass('hide');
+        $('#about-content').fadeOut(300).addClass('hide');
+        $('#partners-content').fadeOut(300).addClass('hide');
+        $('#contact-content').fadeOut(300).addClass('hide');
+        $('#events-content').fadeOut(300).addClass('hide');
         $('.img-about').removeClass('about-img-small');
         $('.contact-title').addClass('rotated');
         $('.tiles').removeClass('hide');
-        if (window.innerWidth<1050){
-            animatedLightContainer.animate({
-                height: "1350px"
-            }, 300);
-        }
-        else {  animatedLightContainer.animate({
+        $('.links').removeClass('hide');
+        //if (window.innerWidth<1050){
+        //    animatedLightContainer.animate({
+        //        height: "1350px"
+        //    }, 300);
+        //}
+         animatedLightContainer.animate({
             height: "100%"
-        }, 300);}
+        }, 300);
 
     };
 
@@ -381,15 +390,16 @@ $('document').ready(function () {
     }(document, 'script', 'facebook-jssdk'));
 
     $('.first, .third').slick({
+
         lazyLoad: 'ondemand',
         arrows: false,
         autoplay: true,
         autoplaySpeed: 2000,
         infinite: true,
         speed: 300,
+        variableWidth: true,
         slidesToShow:1,
         slidesToScroll:1,
-        variableWidth: true
-});
+    });
 
 });
