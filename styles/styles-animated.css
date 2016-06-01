@@ -211,11 +211,18 @@ hr {
     bottom: 0;
     color: white;
     height: 80px;
-    background-color: black;
+    background-color: #272727;
     font-family: Raleway-Regular, sans-serif;
     font-size: 20px;
     text-align: center;
     padding-top: 25px;
+    transition: .3s ease-in;
+    -moz-transition: .3s ease-in;
+    -webkit-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
+}
+.about:hover .about-nav{
+    background-color: #21545f;
 }
 .about-text {
     font-family: Raleway-Regular, sans-serif;
