@@ -123,7 +123,7 @@ a {
 .about, .artists, .partners, .contact, .events, .tickets {
     border: solid 1px #1d1d1d;
     z-index: 1;
-    background-position: center;
+    background-position: 50% 50%;
     color: black;
     position: relative;
 }
@@ -203,7 +203,7 @@ hr {
     -o-transition: .3s ease-in;
 }
 .about:hover img{
-    transform: scale(1.06);
+    transform: scale(1.04);
 }
 .about-nav {
     width: 100%;
@@ -240,10 +240,11 @@ hr {
 .artists{
     height: 195px;
     width: 621px;
+    overflow: hidden;
 }
 .artists:before{
     background:rgba(255,255,255,.3) url('../images/reilly1.jpg');
-    background-size: contain;
+    background-size: cover;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     background-color: inherit;
@@ -254,7 +255,7 @@ hr {
     -moz-transition: .4s ease-in;
     -webkit-transition: .4s ease-in;
     -o-transition: .4s ease-in;
-
+    transform: scale(1.18);
 }
 .artists:after{
     position:absolute;

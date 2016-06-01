@@ -131,7 +131,7 @@ $('document').ready(function () {
         $('.footer')
                 .addClass("hide")
         $(":animated").promise().done(function () {
-            location.href = 'indexa.html'
+            location.href = 'main.html'
         });
     });
 

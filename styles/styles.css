@@ -83,7 +83,7 @@ a:hover, a:focus {
     font-size: 45px;
     margin-left: 50%;
     position: absolute;
-    left: -150px;
+    left: -170px;
     letter-spacing: 3px;
     margin-top: -40px;
 }
@@ -225,7 +225,7 @@ footer {
         top: 0 !important;
     }
 }
-@media screen and (max-height: 735px){
+@media screen and (max-height: 850px){
     .animatedLogo {
         height: 300px;
         width: 300px;
@@ -249,7 +249,7 @@ footer {
     .mainDate {
         font-size: 29px;
         left: -120px;
-        top: 70vh;
+        margin-top:0;
     }
 
     .contact-data {
@@ -262,7 +262,7 @@ footer {
         padding: 10px 20px;
     }
     }
-@media screen and (max-height: 500px){
+@media screen and (max-height: 540px){
     .animatedLogo {
         height: 200px;
         width: 200px;
