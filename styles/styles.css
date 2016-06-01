@@ -73,7 +73,7 @@ a:hover, a:focus {
 }
 
 .darkContainer {
-    height: 95vh;
+    height: 90vh;
     background-color: black;
 }
 
@@ -131,7 +131,7 @@ a:hover, a:focus {
 }
 
 footer {
-    height: 5vh;
+    height: 10vh;
     background-color: black;
     color: white;
     text-align: center;
