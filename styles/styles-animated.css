@@ -121,11 +121,7 @@ a {
 }
 
 .about, .artists, .partners, .contact, .events, .tickets {
-    /*transition: .4s ease-in;*/
-    /*-moz-transition: .4s ease-in;*/
-    /*-webkit-transition: .4s ease-in;*/
-    /*-o-transition: .4s ease-in;*/
-    border: solid 1px black;
+    border: solid 1px #1d1d1d;
     z-index: 1;
     background-position: center;
     color: black;
@@ -133,7 +129,6 @@ a {
 }
 .about:hover, .artists:hover, .partners:hover, .contact:hover, .events:hover, .tickets:hover {
     cursor: pointer;
-
 }
 hr {
     width: 85%;
@@ -184,7 +179,9 @@ hr {
     height: 420px;
     width: 344px;
     top: 10px;
+    overflow: hidden;
 }
+
 .about-link {
     position:absolute;
 }
@@ -205,8 +202,8 @@ hr {
     -webkit-transition: .3s ease-in;
     -o-transition: .3s ease-in;
 }
-.img-about:hover {
-    transform: scale(1);
+.about:hover img{
+    transform: scale(1.06);
 }
 .about-nav {
     width: 100%;
@@ -250,6 +247,7 @@ hr {
     -moz-transition: .4s ease-in;
     -webkit-transition: .4s ease-in;
     -o-transition: .4s ease-in;
+
 }
 .artists:after{
     position:absolute;
@@ -257,14 +255,12 @@ hr {
     content:'';
     z-index:1;
     opacity:0;
-
 }
 .artists:hover:before{
     opacity:0.8;
 }
 .artists:hover:after{
     opacity:0.3;
-
 }
 .artists h2 {
     text-align: center;
@@ -592,13 +588,13 @@ iframe {
     width: 348px;
 }
 
-.footer {
-    height: 0;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    padding-top: 20px;
-    font-family: Raleway-Regular, sans-serif;
-}
+/*.footer {*/
+    /*height: 0;*/
+    /*background-color: rgb(255, 255, 255);*/
+    /*text-align: center;*/
+    /*padding-top: 20px;*/
+    /*font-family: Raleway-Regular, sans-serif;*/
+/*}*/
 
 .clear {
     display: block;

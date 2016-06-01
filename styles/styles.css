@@ -44,6 +44,9 @@ a:hover, a:focus {
     background-size: cover;
     position: relative;
 }
+.animatedLogo:hover {
+    cursor: pointer;
+}
 
 .waves {
     width: 175px;
@@ -70,43 +73,41 @@ a:hover, a:focus {
 }
 
 .darkContainer {
-    height: 100vh;
+    height: 95vh;
     background-color: black;
 }
 
 .mainDate, .animatedDate {
     color: white;
     font-family: Mathlete Bulky, sans-serif;
-    font-size: 20px;
-    margin-left: 65%;
+    font-size: 45px;
+    margin-left: 50%;
     position: absolute;
-    /*left: -170px;*/
+    left: -150px;
     letter-spacing: 3px;
-    margin-top: -270px;
+    margin-top: -40px;
 }
 
 .contact-data {
     margin-left: 50%;
-    left: -120px;
+    left: -110px;
     position:absolute;
-    bottom: 10%;
+    bottom: 20%;
     font-family: Raleway-Light, sans-serif;
     font-size: 30px;
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
     letter-spacing: 4px;
+    border: solid 1px rgba(255, 255, 255, 0.7);
+    padding: 20px 40px;
+}
+.contact-data p {
+    margin: 0;
 }
 .contact-data:hover {
     cursor: pointer;
-    color: #fd6511;
+    color: white;
 }
 
-.rotate {
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
 .menu-wrapper {
     width: 1000px;
     margin:auto;
@@ -127,6 +128,15 @@ a:hover, a:focus {
     height: 660px;
     width: 996px;
     position:relative;
+}
+
+footer {
+    height: 5vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-family: Raleway-Light, sans-serif;
 }
 /*------------------------------Media queries--------------------------------------*/
 @media screen and (min-width: 1600px){
@@ -152,7 +162,7 @@ a:hover, a:focus {
         left: 153px;
     }
     .mainDate {
-        font-size: 49px;
+        font-size: 52px;
         left: -190px;
     }
 }
@@ -160,13 +170,6 @@ a:hover, a:focus {
 @media screen and (max-width: 1050px){
     .menu-wrapper {
         width: 100%;
-    }
-    .contact-data {
-        width: 300px;
-        left: -150px;
-        letter-spacing: 2px;
-        margin-top: -18%;
-        text-align: center;
     }
 
     .lightContainer, .tilesContainer {
@@ -222,7 +225,7 @@ a:hover, a:focus {
         top: 0 !important;
     }
 }
-@media screen and (max-height: 680px){
+@media screen and (max-height: 735px){
     .animatedLogo {
         height: 300px;
         width: 300px;
@@ -248,8 +251,18 @@ a:hover, a:focus {
         left: -120px;
         top: 70vh;
     }
-}
-@media screen and (max-height: 460px){
+
+    .contact-data {
+        bottom: 15%;
+        left: -60px;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: 2px;
+        border: solid 1px rgba(255, 255, 255, 0.7);
+        padding: 10px 20px;
+    }
+    }
+@media screen and (max-height: 500px){
     .animatedLogo {
         height: 200px;
         width: 200px;
@@ -273,5 +286,15 @@ a:hover, a:focus {
     .mainDate {
         font-size: 18px;
         left: -90px;
+    }
+    .contact-data {
+        bottom: 15%;
+        left: -60px;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: 2px;
+        border: solid 1px rgba(255, 255, 255, 0.7);
+        padding: 10px 20px;
+
     }
 }

@@ -73,7 +73,7 @@ $('document').ready(function () {
         // audio["wave"].pause();
     });
 
-    $('span').click(function () {
+    $('.contact-data, .animatedLogo').click(function () {
         animatedLogo.addClass('logoAnimatedSmall');
         $('.blue_wave').stop(true, true);
         $('.yellow_wave').stop(true, true);
@@ -114,14 +114,7 @@ $('document').ready(function () {
                     paddingTop: "0"
                 }, 1200);
         $('.mainDate')
-                .removeClass('mainDate')
-                .addClass("animatedDate")
-                .animate({
-                    position: "relative",
-                    fontSize: '60px',
-                    top: "0",
-                    left: "2vw"
-                }, 500);
+                .addClass("hide")
         animatedLogo
                 .animate({
                     height: "83px",
@@ -136,9 +129,7 @@ $('document').ready(function () {
                     height: "100%"
                 }, 300);
         $('.footer')
-                .animate({
-                    height: "80px"
-                }, 300)
+                .addClass("hide")
         $(":animated").promise().done(function () {
             location.href = 'indexa.html'
         });
