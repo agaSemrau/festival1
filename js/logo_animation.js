@@ -381,7 +381,6 @@ $('document').ready(function () {
     }(document, 'script', 'facebook-jssdk'));
 
     $('.first, .third').slick({
-
         lazyLoad: 'ondemand',
         arrows: false,
         autoplay: true,
